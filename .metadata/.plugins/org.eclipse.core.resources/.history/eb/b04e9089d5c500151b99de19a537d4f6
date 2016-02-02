@@ -1,0 +1,16 @@
+package withMain;
+
+public class AddSpaces
+{
+	public static void addSpaces(String str)
+	{
+		str = str.replaceAll("(?<=\\p{Punct})(?=\\w).", " ");
+	}
+	public static void main(String[] args)
+	{
+		String str = "Исходная.строка, куда нужно,добавить пробелы!";
+		addSpaces(str);
+		System.out.println(str);
+	}
+
+}

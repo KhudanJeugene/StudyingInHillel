@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;WordsToNumber&apos; to &apos;WordsToNumber_3&apos;&#x0D;&#x0A;- Original project: &apos;Function&apos;&#x0D;&#x0A;- Original element: &apos;WordsToNumber&apos;&#x0D;&#x0A;- Renamed element: &apos;WordsToNumber_3&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;WordsToNumber&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{WordsToNumber.java[WordsToNumber" matchStrategy="1" name="WordsToNumber_3" qualified="false" references="true" similarDeclarations="false" stamp="1453062733563" textual="false" version="1.0"/>
+</session>

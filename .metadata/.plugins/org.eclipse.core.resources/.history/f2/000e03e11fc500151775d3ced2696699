@@ -1,0 +1,24 @@
+package withMain;
+
+public class ShortWord
+{
+	public static int findShort(String s)
+	{
+		String [] arrs = s.split("[\\s.,?!—]+");
+		int minword = arrs[0].length();
+		for (String word: arrs)
+		{
+			if(minword>word.length())
+				minword = word.length();
+		}
+		return minword;
+	}
+	public static void main(String[] args)
+	{
+		String s = "";
+		int res = findShort(s);
+		System.out.println(res);
+
+	}
+
+}

@@ -1,0 +1,14 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class DeleteSymbolTest
+{
+
+	@Test
+	public void testDeleteSymbol()
+	{
+		fail("Not yet implemented"); // TODO
+	}
+
+}

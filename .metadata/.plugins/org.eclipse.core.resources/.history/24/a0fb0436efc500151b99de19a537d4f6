@@ -1,0 +1,50 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class AddSpacesTest
+{
+
+	@Test (expected = IllegalArgumentException.class)
+	public void testAddSpaces_null()
+	{
+		String str = null;
+		HW9_3.addSpaces(str);
+	}
+	@Test
+	public void testAddSpaces_0()
+	{
+		String str = "";		
+		HW9_3.addSpaces(str);
+		String res = "";
+		assertEquals(str,res);
+	}
+	@Test
+	public void testAddSpaces_1()
+	{
+		String []str = {"Many"};		
+		int l = 4;
+		HW9_3.addSpaces(str,l);
+		String[]res = {"M$"};
+		assertArrayEquals(str,res);
+	}
+	@Test
+	public void testAddSpaces_2()
+	{
+		String []str = {"Many", "symb"};		
+		int l = 4;
+		HW9_3.addSpaces(str,l);
+		String[]res = {"M$", "s$"};
+		assertArrayEquals(str,res);
+	}
+	@Test
+	public void testAddSpaces_many()
+	{
+		String []str = {"Many", "symb", "and"};		
+		int l = 4;
+		HW9_3.addSpaces(str,l);
+		String[]res = {"M$", "s$", "and"};
+		assertArrayEquals(str,res);
+	}
+
+}

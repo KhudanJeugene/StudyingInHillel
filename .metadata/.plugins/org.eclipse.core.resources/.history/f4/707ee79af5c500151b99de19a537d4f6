@@ -1,0 +1,21 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class DeleteSymbolTest
+{
+
+	@Test (expected = IllegalArgumentException.class)
+	public void testDeleteSymbol_null()
+	{
+		String str = null;
+		HW9_3.deleteSymbol(1, 1, str);
+	}
+	@Test
+	public void testDeleteSymbol_0()
+	{
+		String str = "";
+		String res = HW9_3.deleteSymbol(0, 0, str);
+	}
+
+}

@@ -1,0 +1,16 @@
+package withMain;
+
+public class IntToString 
+{
+	public static String intToString(int i)
+	{
+		String res = String.valueOf(i);
+		return res;
+	}
+	public static void main(String[] args) 
+	{
+		String res = intToString(1);
+		System.out.println(res);
+	}
+
+}

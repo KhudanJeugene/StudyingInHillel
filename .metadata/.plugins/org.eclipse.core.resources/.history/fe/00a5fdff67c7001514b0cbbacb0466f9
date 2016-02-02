@@ -1,0 +1,291 @@
+public class AList0
+{
+	private int[] ar = {};
+	public AList0()
+	{
+
+	}
+	public AList0(int[] ini)
+	{
+		init(ini);
+	}
+	public void init(int[] a)
+	{
+		if (a == null)
+		{
+			throw new IllegalArgumentException();
+		} 
+		else if (a.length == 0)
+		{
+			ar = new int[0];
+			return;
+		}
+		int[] tmp = new int[a.length];
+		for (int i = 0; i < a.length; i++)
+		{
+			tmp[i] = a[i];
+		}
+		ar = tmp;
+	}
+	public void print()
+	{
+		for (int i = 0; i < ar.length; i++) 
+		{
+			System.out.print(ar[i] + ", ");
+		}
+		System.out.println();
+	}
+	public int size()
+	{
+		return ar.length;
+	}
+	public void setArray(int[] a)
+	{
+		init(a);
+	}
+	public void clear()
+	{
+		init(new int[0]);
+	}
+	public int[] toArray()
+	{
+		return ar;
+	}
+	public String toString()
+	{
+		String str = "";
+		for (int i = 0; i < ar.length; i++)
+		{
+			str += ar[i] + ", ";
+		}
+		return str;
+	}
+	public void addStart(int val)
+	{
+		int[] temp = new int[ar.length + 1];
+		for (int i = 1; i < temp.length; i++)
+		{
+			temp[i] = ar[i - 1];
+		}
+		temp[0] = val;
+		ar = temp;
+	}
+	public void addEnd(int val)
+	{
+		int[] temp = new int[ar.length + 1];
+		for (int i = 0; i < ar.length; i++)
+		{
+			temp[i] = ar[i];
+		}
+		temp[temp.length - 1] = val;
+		ar = temp;
+	}
+
+	public void addPos(int pos, int val)
+	{
+		if (pos > ar.length)
+		{
+			throw new IllegalArgumentException();
+		}
+		int[] temp = new int[ar.length + 1];
+		for (int i = 0; i < pos; i++)
+		{
+			temp[i] = ar[i];
+		}
+		temp[pos] = val;
+		for (int i = pos + 1; i < temp.length; i++)
+		{
+			temp[i] = ar[i - 1];
+		}
+		ar = temp;
+	}
+	public int delStart()
+	{
+		if (ar.length == 0)
+			throw new NegativeArraySizeException();
+
+		int
+		int[] temp = new int[ar.length - 1];
+		for (int i = 0; i < temp.length; i++)
+		{
+			temp[i] = ar[i + 1];
+		}
+		ar = temp;
+
+		return ar[0];
+	}
+	public int delEnd()
+	{
+		if (ar.length == 0)
+			throw new NegativeArraySizeException();
+
+		int delVal = ar[ar.length-1];
+		int[] temp = new int[ar.length - 1];
+		for (int i = 0; i < temp.length; i++)
+		{
+			temp[i] = ar[i];
+		}
+		ar = temp;
+
+		return delVal;
+	}
+
+
+
+
+	@Override
+	public int max()
+	{
+		if (ar.length == 0)
+			throw new IndexOutOfBoundsException();
+		int res = ar[0];
+		for (int i = 0; i < ar.length; i++)
+		{
+			if (ar[i] > res)
+			{
+				res = ar[i];
+			}
+		}
+		return res;
+	}
+
+	@Override
+	public int min()
+	{
+		if (ar.length == 0)
+		{
+			throw new IndexOutOfBoundsException();
+		}
+		int res = ar[0];
+		for (int i = 0; i < ar.length; i++)
+		{
+			if (ar[i] < res)
+			{
+				res = ar[i];
+			}
+		}
+		return res;
+	}
+
+	@Override
+	public int minIndex()
+	{
+		if (ar.length == 0)
+		{
+			throw new IndexOutOfBoundsException();
+		}
+		int res = 0;
+		for (int i = 0; i < ar.length; i++)
+		{
+			if (ar[i] < ar[res])
+			{
+				res = i;
+			}
+		}
+		return res;
+	}
+
+	@Override
+	public int maxIndex()
+	{
+		if (ar.length == 0)
+		{
+			throw new IndexOutOfBoundsException();
+		}
+		int res = 0;
+		for (int i = 0; i < ar.length; i++)
+		{
+			if (ar[i] > ar[res])
+			{
+				res = i;
+			}
+		}
+		return res;
+	}
+
+	@Override
+	public void reverse()
+	{
+		int[] resArr = new int[ar.length];
+		int j = 0;
+		for (int i = ar.length - 1; i >= 0; i--)
+		{
+			resArr[j] = ar[i];
+			j++;
+		}
+		ar = resArr;
+	}
+
+	@Override
+	public void sort()
+	{
+		for (int i = ar.length - 1; i >= 1; i--)
+		{
+			boolean sorted = true;
+			for (int j = 0; j < i; j++)
+			{
+				if (ar[j] > ar[j + 1])
+				{
+					int temp = ar[j];
+					ar[j] = ar[j + 1];
+					ar[j + 1] = temp;
+					sorted = false;
+				}
+			}
+			if (sorted)
+			{
+				break;
+			}
+		}
+	}
+
+
+
+	@Override
+	public int[] getArray()
+	{
+		return this.toArray();
+	}
+
+
+
+	@Override
+	public void set(int pos, int val)
+	{
+		ar[pos] = val;
+	}
+
+	@Override
+	public int get(int pos)
+	{
+		return ar[pos];
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+	@Override
+	public void delPos(int pos)
+	{
+		int[] temp = new int[ar.length - 1];
+		for (int i = 0; i < pos; i++)
+		{
+			temp[i] = ar[i];
+		}
+		for (int i = pos; i < temp.length; i++)
+		{
+			temp[i] = ar[i + 1];
+		}
+		ar = temp;
+	}
+
+
+}

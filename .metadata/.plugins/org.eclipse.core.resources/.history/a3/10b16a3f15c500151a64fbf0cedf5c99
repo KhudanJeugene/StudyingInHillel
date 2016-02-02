@@ -1,0 +1,24 @@
+package withMain;
+
+public class IntToString 
+{
+	public static String intToString(int i) throws Exception
+	{
+		String res = "";
+		res = String.valueOf(i);	
+		return res;
+	}
+	public static void main(String[] args) 
+	{
+		try
+		{
+		String res = intToString(ð);
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		System.out.println(res);
+	}
+
+}

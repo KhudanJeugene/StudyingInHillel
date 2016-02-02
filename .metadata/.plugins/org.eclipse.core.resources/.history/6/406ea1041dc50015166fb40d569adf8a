@@ -1,0 +1,25 @@
+package withMain;
+
+public class ShortWord
+{
+	public static int findShort(String s)
+	{
+		int res = 0;
+		String [] arrs = s.split("");
+		int min = 0;
+		for(int i=0; i<s.length()-1; i++)
+		{
+			if (arrs[i].length()<arrs[i+1].length())
+				min = arrs[i].length();
+		}
+		return res=min;
+	}
+	public static void main(String[] args)
+	{
+		String s = "Привет! Я ваша мама";
+		int res = findShort(s);
+		System.out.println(res);
+
+	}
+
+}

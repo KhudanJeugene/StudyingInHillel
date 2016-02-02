@@ -1,0 +1,16 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class StringToIntTest
+{
+
+	@Test
+	public void testStringToInt()
+	{
+		String str = "5";
+		int res = HW9_2.stringToInt(str);
+		assertEquals(5,res);
+	}
+
+}

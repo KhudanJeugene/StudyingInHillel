@@ -1,0 +1,14 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class StringToDoubleTest
+{
+
+	@Test
+	public void testStringToDouble()
+	{
+		fail("Not yet implemented"); // TODO
+	}
+
+}

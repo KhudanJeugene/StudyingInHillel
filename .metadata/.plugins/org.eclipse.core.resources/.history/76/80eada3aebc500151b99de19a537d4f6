@@ -1,0 +1,15 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class StringToDoubleTest
+{
+	@Test
+	public void testStringToDouble()
+	{
+		String str = "5.5";
+		double res = HW9_2.stringToDouble(str);
+		assertEquals(res,5.5,0.001);
+	}
+
+}

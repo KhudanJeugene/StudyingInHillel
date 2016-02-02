@@ -1,0 +1,16 @@
+package withMain;
+
+public class AddSpaces
+{
+	public static void addSpaces(StringBuffer str)
+	{
+		while(str.)
+	}
+	public static void main(String[] args)
+	{
+		StringBuffer str = new StringBuffer("Исходная.строка, куда нужно,добавить пробелы!");
+		addSpaces(str);
+		System.out.println(str);
+	}
+
+}

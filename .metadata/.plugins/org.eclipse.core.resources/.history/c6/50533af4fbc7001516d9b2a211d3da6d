@@ -1,0 +1,300 @@
+public class AList0
+{
+	private int[] ar = {};
+	public AList0()
+	{
+
+	}
+	
+	public AList0(int[] ini)
+	{
+		init(ini);
+	}
+	
+	public void init(int[] a)
+	{
+		if (a == null)
+		{
+			throw new IllegalArgumentException();
+		} 
+		else if (a.length == 0)
+		{
+			ar = new int[0];
+			return;
+		}
+		int[] tmp = new int[a.length];
+		for (int i = 0; i < a.length; i++)
+		{
+			tmp[i] = a[i];
+		}
+		ar = tmp;
+	}
+	
+	public void print()
+	{
+		if(ar==null || ar.length==0)
+			throw new IllegalArgumentException();
+		
+		for (int i = 0; i < ar.length; i++) 
+		{
+			System.out.print(ar[i] + " ");
+		}
+		System.out.println();
+	}
+	
+	public int size()
+	{
+		if(ar==null)
+			throw new IllegalArgumentException();
+		
+		return ar.length;
+	}
+
+	public void clear()
+	{
+		init(new int[0]);
+	}
+	
+	public int[] toArray()
+	{
+		return ar;
+	}
+	
+	public String toString()
+	{
+		String str = "";
+		for (int i = 0; i < ar.length; i++)
+		{
+			str += ar[i] + ", ";
+		}
+		return str;
+	}
+
+	public void addStart(int val)
+	{
+		int[] temp = new int[ar.length + 1];
+		for (int i = 1; i < temp.length; i++)
+		{
+			temp[i] = ar[i - 1];
+		}
+		temp[0] = val;
+		ar = temp;
+	}
+	
+	public void addEnd(int val)
+	{
+		int[] temp = new int[ar.length + 1];
+		for (int i = 0; i < ar.length; i++)
+		{
+			temp[i] = ar[i];
+		}
+		temp[temp.length - 1] = val;
+		ar = temp;
+	}
+
+	public void addPos(int pos, int val)
+	{
+		if (pos > ar.length)
+		{
+			throw new ArrayIndexOutOfBoundsException();
+		}
+		int[] temp = new int[ar.length + 1];
+		for (int i = 0; i < pos; i++)
+		{
+			temp[i] = ar[i];
+		}
+		temp[pos] = val;
+		for (int i = pos + 1; i < temp.length; i++)
+		{
+			temp[i] = ar[i - 1];
+		}
+		ar = temp;
+	}
+	
+	public int delStart()
+	{
+		if (ar.length == 0)
+			throw new NegativeArraySizeException();
+
+		int delVal = ar[0];
+		int[] temp = new int[ar.length - 1];
+		for (int i = 0; i < temp.length; i++)
+		{
+			temp[i] = ar[i + 1];
+		}
+		ar = temp;
+
+		return delVal;
+	}
+	
+	public int delEnd()
+	{
+		if (ar.length == 0)
+			throw new NegativeArraySizeException();
+
+		int delVal = ar[ar.length-1];
+		int[] temp = new int[ar.length - 1];
+		for (int i = 0; i < temp.length; i++)
+		{
+			temp[i] = ar[i];
+		}
+		ar = temp;
+
+		return delVal;
+	}
+	
+	public int delPos(int pos)
+	{
+		if (ar.length == 0)
+			throw new NegativeArraySizeException();
+
+		if (pos > ar.length-1)
+			throw new ArrayIndexOutOfBoundsException();
+
+		int delVal = ar[pos];
+		int[] temp = new int[ar.length - 1];
+		for (int i = 0; i < temp.length; i++)
+		{
+			temp[i] = i<pos? ar[i] : ar[i+1];
+		}
+		ar = temp;
+		return delVal;
+	}
+	
+	public void set(int pos, int val)
+	{
+		if(pos>ar.length-1)
+			throw new ArrayIndexOutOfBoundsException();
+
+		ar[pos] = val;
+	}
+	public int get(int pos)
+	{
+		if(pos >ar.length-1)		
+			throw new ArrayIndexOutOfBoundsException();
+
+		return ar[pos];
+	}
+	
+	public int minElem(int[]arr)
+	{		
+		if (arr==null || arr.length==0) 
+		{
+			throw new IllegalArgumentException();
+		}
+		int min=arr[0];
+		for (int i=0; i<arr.length; i++)
+		{
+			if (min>arr[i])
+			{
+				min = arr[i];
+			}
+		}
+		return min;
+	}
+
+	public int maxElem(int[]arr)
+	{
+		if (arr==null || arr.length==0) 
+		{
+			throw new IllegalArgumentException();
+		}
+		int max=arr[0];
+		for (int i=0; i<arr.length; i++)
+		{
+			if (max<arr[i])
+			{
+				max = arr[i];
+			}
+		}
+		return max;	
+	}
+
+	public int minInd(int []arr)
+	{
+		if (arr==null || arr.length==0) 
+		{
+			throw new IllegalArgumentException();
+		}
+		int ind=0;
+		for (int a=0; a<arr.length; a++)
+		{
+			if (arr[ind]>arr[a])
+			{
+				ind = a;
+			}
+		}
+		return ind;
+	}
+
+	public int maxInd(int []arr)
+	{
+		if (arr==null || arr.length==0) 
+		{
+			throw new IllegalArgumentException();
+		}
+		int ind = 0;
+		for (int i=0; i<arr.length; i++)
+		{
+			if (arr[ind]<arr[i])
+			{
+				ind = i;
+			}
+		}
+		return ind;
+	}
+
+	public void reverse(int[]arr)
+	{	
+		if(arr==null || arr.length==0)
+		{
+			throw new IllegalArgumentException();
+		}
+		for (int i=0; i<arr.length/2; i++)
+		{
+			int temp = 0;
+			temp = arr[i];
+			arr[i] = arr[arr.length-i-1];
+			arr[arr.length-i-1] = temp;
+		}
+	}
+
+	public void reverseHalf(int[] arr)
+	{
+		if(arr==null || arr.length==0)
+		{
+			throw new IllegalArgumentException();
+		}
+		int n = 0;
+		if(arr.length%2==0)
+			n=arr.length/2;
+
+		else
+			n=arr.length/2+1;
+
+		for(int i=0; i<arr.length/2; i++)
+		{
+			int temp = arr[i];
+			arr[i] = arr[n+i];
+			arr[n+i] = temp;
+		}
+	}
+	public static void sortSelect(int[]arr)
+	{
+		if (arr==null || arr.length==0)
+		{
+			throw new IllegalArgumentException();
+		}
+		for (int i=0;i<arr.length-1;i++)
+		{
+			int min =i;
+			for(int j=i+1;j<arr.length;j++)
+			{
+				if (arr[j]<arr[min]) min=j;
+			}
+			int temp = arr[i];
+			arr[i]=arr[min];
+			arr[min]=temp;
+		}
+	}
+}
