@@ -238,6 +238,7 @@ public class AList0
 			ar[ar.length/2+d+i] = temp;
 		}
 	}
+	
 	public void sortSelect()
 	{
 		for (int i=0;i<ar.length-1;i++)

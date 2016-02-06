@@ -221,6 +221,8 @@ public class AList0Test
 		AList0 rr = new AList0(ar);
 		int add = 55;		
 		rr.addStart(add);
+		int s = rr.size();
+		assertEquals(7,s);
 		int[] exp = {55,10,20,30,88,41,65};
 		int[] act = rr.toArray();		
 		assertArrayEquals(exp,act);
@@ -232,6 +234,8 @@ public class AList0Test
 		AList0 rr = new AList0(ar);
 		int add = 55;	
 		rr.addStart(add);
+		int s = rr.size();
+		assertEquals(3,s);
 		int[] exp = {55,10,20};
 		int[] act = rr.toArray();	
 		assertArrayEquals(exp,act);
@@ -243,6 +247,8 @@ public class AList0Test
 		AList0 rr = new AList0(ar);
 		int add = 55;	
 		rr.addStart(add);
+		int s = rr.size();
+		assertEquals(2,s);
 		int[] exp = {55,10};
 		int[] act = rr.toArray();		
 		assertArrayEquals(exp,act);
@@ -254,6 +260,8 @@ public class AList0Test
 		AList0 rr = new AList0(ar);
 		int add = 55;	
 		rr.addStart(add);
+		int s = rr.size();
+		assertEquals(1,s);
 		int[] exp = {55};
 		int[] act = rr.toArray();
 		assertArrayEquals(exp,act);
@@ -265,6 +273,8 @@ public class AList0Test
 		AList0 rr = new AList0(ar);
 		int add = 55;
 		rr.addStart(add);
+		int s = rr.size();
+		assertEquals(1,s);
 		int[] exp = {55};
 		int[] act = rr.toArray();
 		assertArrayEquals(exp,act);
@@ -282,6 +292,8 @@ public class AList0Test
 		AList0 rr = new AList0(ar);
 		int add = 55;	
 		rr.addEnd(add);
+		int s = rr.size();
+		assertEquals(7,s);
 		int[] exp = {10,20,30,88,41,65,55};
 		int[] act = rr.toArray();
 		assertArrayEquals(exp,act);
@@ -293,6 +305,8 @@ public class AList0Test
 		AList0 rr = new AList0(ar);
 		int add = 55;	
 		rr.addEnd(add);
+		int s = rr.size();
+		assertEquals(3,s);
 		int[] exp = {10,20,55};
 		int[] act = rr.toArray();
 		assertArrayEquals(exp,act);
@@ -304,6 +318,8 @@ public class AList0Test
 		AList0 rr = new AList0(ar);
 		int add = 55;	
 		rr.addEnd(add);
+		int s = rr.size();
+		assertEquals(2,s);
 		int[] exp = {10,55};
 		int[] act = rr.toArray();
 		assertArrayEquals(exp, act);
@@ -315,6 +331,8 @@ public class AList0Test
 		AList0 rr = new AList0(ar);
 		int add = 55;	
 		rr.addEnd(add);
+		int s = rr.size();
+		assertEquals(1,s);
 		int[] exp = {55};
 		int[] act = rr.toArray();
 		assertArrayEquals(exp, act);
@@ -326,6 +344,8 @@ public class AList0Test
 		AList0 rr = new AList0(ar);
 		int add = 55;	
 		rr.addEnd(add);
+		int s = rr.size();
+		assertEquals(1,s);
 		int[] exp = {55};
 		int[] act = rr.toArray();
 		assertArrayEquals(exp, act);
@@ -343,6 +363,8 @@ public class AList0Test
 		int pos = 2;
 		int val = 55;		
 		rr.addPos(pos, val);
+		int s = rr.size();
+		assertEquals(7,s);
 		int[] exp= {10,20,55,30,88,41,65};
 		int[] act = rr.toArray();
 		assertArrayEquals(exp,act);
@@ -355,6 +377,8 @@ public class AList0Test
 		int pos = 2;
 		int val = 55;		
 		rr.addPos(pos, val);
+		int s = rr.size();
+		assertEquals(3,s);
 		int[] exp = {10,20,55};
 		int[] act = rr.toArray();
 		assertArrayEquals(exp,act);
@@ -367,6 +391,8 @@ public class AList0Test
 		int pos = 1;
 		int val = 55;		
 		rr.addPos(pos, val);
+		int s = rr.size();
+		assertEquals(2,s);
 		int[] exp = {10,55};
 		int[] act = rr.toArray();
 		assertArrayEquals(exp,act);
@@ -388,6 +414,8 @@ public class AList0Test
 		int pos = 0;
 		int val = 55;		
 		rr.addPos(pos, val);
+		int s = rr.size();
+		assertEquals(1,s);
 		int[] exp = {55};
 		int[] act = rr.toArray();
 		assertArrayEquals(exp,act);

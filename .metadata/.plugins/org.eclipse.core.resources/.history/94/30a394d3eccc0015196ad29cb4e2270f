@@ -1,0 +1,65 @@
+public class AList1
+{
+	private int[] ar = new int[10];
+	private int top = 0;
+	public AList1()
+	{
+	}
+
+	public AList1(int[] ini)
+	{
+		init(ini);
+	}
+	public void init(int[] a)
+	{
+		if (a == null)
+		{
+			ar = new int[10];
+			return;
+		}
+		int[] temp = new int[a.length];
+		top = a.length;
+		for (int i = 0; i < top; i++)
+		{		
+			temp[i] = a[i];
+		}
+		ar = temp;
+	}
+	public int size()
+	{
+		return top;
+	}
+	public void clear()
+	{
+		ar = new int[10];
+	}
+	public int [] toArray()
+	{
+		int[] temp = new int[top];
+		for (int i = 0; i < top; i++)
+			temp[i] = ar[i];
+
+		return temp;
+	}
+	public String toString()
+	{
+		String str = "{";
+		for (int i = 0; i < top; i++)
+		{
+			str += i < ar.length-1? ar[i] + ", " : ar[i];
+		}
+		str += "}";
+		return str;
+	}
+	public void addStart(int val)
+	{
+		int[] temp = new int[top + 1];
+		for (int i = 0; i < top; i++)
+		{
+			temp[i+1] = ar[i];
+		}
+		temp[0] = val;
+		ar = temp;
+	}
+	
+}

@@ -1,0 +1,29 @@
+public class AList1
+{
+	private int[] ar = new int[10];
+	private int top = 0;
+	public AList1()
+	{
+	}
+
+	public AList1(int[] ini)
+	{
+		init(ini);
+	}
+	public void init(int[] a)
+	{
+		if (a == null)
+		{
+			ar = new int[10];
+			return;
+		}
+		int[] temp = new int[a.length];
+		top = a.length;
+		for (int i = 0; i < top; i++)
+		{		
+			temp[i] = a[i];
+		}
+		ar = temp;
+	}
+	
+}
