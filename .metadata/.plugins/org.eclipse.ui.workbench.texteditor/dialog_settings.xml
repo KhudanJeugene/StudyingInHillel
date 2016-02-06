@@ -2,30 +2,30 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="rra" key="selection"/>
+		<item value="int[] " key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="int []"/>
+			<item value="int []ar"/>
+			<item value="one"/>
+			<item value="two"/>
 			<item value="ra"/>
 			<item value="arr"/>
 			<item value="add "/>
 			<item value="ReverseString"/>
-			<item value="testReverseString"/>
-			<item value="DeleteLastWort"/>
-			<item value="DeleteSymbol"/>
-			<item value="AddSpaces"/>
 		</list>
 		<list key="replacehistory">
+			<item value="int[] "/>
+			<item value="1"/>
+			<item value="2"/>
 			<item value="rra"/>
 			<item value="ar"/>
 			<item value="DeleteLastWord"/>
 			<item value="deleteLast"/>
 			<item value="ReverseString"/>
-			<item value="OneInstance"/>
-			<item value="AddSpas"/>
-			<item value="ChangeSymb"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

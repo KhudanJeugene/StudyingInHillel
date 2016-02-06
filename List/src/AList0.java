@@ -3,7 +3,6 @@ public class AList0
 	private int[] ar = {};
 	public AList0()
 	{
-
 	}
 
 	public AList0(int[] ini)
@@ -15,28 +14,15 @@ public class AList0
 	{
 		if (a == null)
 		{
-			throw new IllegalArgumentException();
-		} 
-		else if (a.length == 0)
-		{
 			ar = new int[0];
 			return;
 		}
-		int[] tmp = new int[a.length];
+		int[] temp = new int[a.length];
 		for (int i = 0; i < a.length; i++)
 		{
-			tmp[i] = a[i];
+			temp[i] = a[i];
 		}
-		ar = tmp;
-	}
-
-	public void print()
-	{
-		for (int i = 0; i < ar.length; i++) 
-		{
-			System.out.print(ar[i] + " ");
-		}
-		System.out.println();
+		ar = temp;
 	}
 
 	public int size()
@@ -46,33 +32,35 @@ public class AList0
 
 	public void clear()
 	{
-		init(new int[0]);
+		ar = new int[0];
 	}
 
-	public int[] toArray()
+	public int [] toArray()
 	{
-		if (ar.length == 0 )
-			init(new int[0]);
+		int[] temp = new int[ar.length];
+		for (int i = 0; i < ar.length; i++)
+			temp[i] = ar[i];
 
-		return ar;
+		return temp;
 	}
 
 	public String toString()
 	{
-		String str = "";
+		String str = "{";
 		for (int i = 0; i < ar.length; i++)
 		{
-			str += ar[i] + " ";
+			str += i < ar.length-1? ar[i] + ", " : ar[i];
 		}
+		str += "}";
 		return str;
 	}
 
 	public void addStart(int val)
 	{
 		int[] temp = new int[ar.length + 1];
-		for (int i = 1; i < temp.length; i++)
+		for (int i = 0; i < ar.length; i++)
 		{
-			temp[i] = ar[i - 1];
+			temp[i+1] = ar[i];
 		}
 		temp[0] = val;
 		ar = temp;
@@ -91,10 +79,6 @@ public class AList0
 
 	public void addPos(int pos, int val)
 	{
-		if (pos > ar.length)
-		{
-			throw new ArrayIndexOutOfBoundsException();
-		}
 		int[] temp = new int[ar.length + 1];
 		for (int i = 0; i < pos; i++)
 		{
@@ -112,7 +96,7 @@ public class AList0
 	{
 		if (ar.length == 0)
 			throw new NegativeArraySizeException();
-
+		
 		int delVal = ar[0];
 		int[] temp = new int[ar.length - 1];
 		for (int i = 0; i < temp.length; i++)
@@ -145,9 +129,6 @@ public class AList0
 		if (ar.length == 0)
 			throw new NegativeArraySizeException();
 
-		if (pos > ar.length-1)
-			throw new ArrayIndexOutOfBoundsException();
-
 		int delVal = ar[pos];
 		int[] temp = new int[ar.length - 1];
 		for (int i = 0; i < temp.length; i++)
@@ -160,27 +141,21 @@ public class AList0
 
 	public void set(int pos, int val)
 	{
-		if(ar.length==0 || pos>ar.length-1)
-			throw new ArrayIndexOutOfBoundsException();
-
 		ar[pos] = val;
 	}
 	public int get(int pos)
 	{
-		if(pos >ar.length-1)		
-			throw new ArrayIndexOutOfBoundsException();
-
 		return ar[pos];
 	}
 
 	public int minElem()
 	{		
-		if (ar.length==0) 
+		if (ar.length == 0) 
 		{
 			throw new IllegalArgumentException();
 		}
 		int min=ar[0];
-		for (int i=0; i<ar.length; i++)
+		for (int i = 1; i < ar.length; i++)
 		{
 			if (min>ar[i])
 			{
@@ -192,12 +167,12 @@ public class AList0
 
 	public int maxElem()
 	{
-		if (ar.length==0) 
+		if (ar.length == 0) 
 		{
 			throw new IllegalArgumentException();
 		}
 		int max=ar[0];
-		for (int i=0; i<ar.length; i++)
+		for (int i = 1; i < ar.length; i++)
 		{
 			if (max<ar[i])
 			{
@@ -209,16 +184,16 @@ public class AList0
 
 	public int minInd()
 	{
-		if (ar.length==0) 
+		if (ar.length == 0) 
 		{
 			throw new IllegalArgumentException();
 		}
 		int ind=0;
-		for (int a=0; a<ar.length; a++)
+		for (int i = 1; i < ar.length; i++)
 		{
-			if (ar[ind]>ar[a])
+			if (ar[ind]>ar[i])
 			{
-				ind = a;
+				ind = i;
 			}
 		}
 		return ind;
@@ -226,7 +201,7 @@ public class AList0
 
 	public int maxInd()
 	{
-		if (ar.length==0) 
+		if (ar.length == 0) 
 		{
 			throw new IllegalArgumentException();
 		}
@@ -243,10 +218,6 @@ public class AList0
 
 	public void reverse()
 	{	
-		if(ar.length==0)
-		{
-			throw new IllegalArgumentException();
-		}
 		for (int i=0; i<ar.length/2; i++)
 		{
 			int temp = 0;
@@ -258,9 +229,6 @@ public class AList0
 
 	public  void reverseHalf()
 	{
-		if(ar.length == 0)
-			throw new IllegalArgumentException();
-
 		int d = (ar.length%2 == 0) ? 0 : 1;
 
 		for(int i=0; i<ar.length/2; i++)
@@ -272,10 +240,6 @@ public class AList0
 	}
 	public void sortSelect()
 	{
-		if (ar.length==0)
-		{
-			throw new IllegalArgumentException();
-		}
 		for (int i=0;i<ar.length-1;i++)
 		{
 			int min =i;
