@@ -1,0 +1,13 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class HW9_3Test
+{
+	//====================
+	//findShort
+	//====================
+	
+	
+
+}

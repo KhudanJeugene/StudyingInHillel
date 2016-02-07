@@ -1,0 +1,165 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class HW3Test
+{
+
+	//======================
+	//minElem
+	//======================
+
+	@Test
+	public void testMinElem_many()
+	{	
+		int []n = {1,2,3};
+		int res = HW3.minElem(n);
+		assertEquals(1,res);
+	}
+	@Test
+	public void testMinElem_two()
+	{	
+		int []n = {-1,2};
+		int res = HW3.minElem(n);
+		assertEquals(-1,res);
+	}
+	@Test
+	public void testMinElem_one()
+	{	
+		int []n = {2};
+		int res = HW3.minElem(n);
+		assertEquals(2,res);
+	}
+	@Test (expected = IllegalArgumentException.class)
+	public void testMinElem_0()
+	{	
+		int []n = {};
+		HW3.minElem(n);
+	}
+	@Test (expected = IllegalArgumentException.class)
+	public void testMinElem_null()
+	{	
+		int []n=null;
+		HW3.minElem(n);		
+	}
+
+	//======================
+	//maxElem
+	//======================
+
+	@Test
+	public void testMaxElem_many()
+	{	
+		int []n = {1,2,3};
+		int res = HW3.maxElem(n);
+		assertEquals(3,res);
+	}
+	@Test
+	public void testMaxElem_two()
+	{	
+		int []n = {-1,2};
+		int res = HW3.maxElem(n);
+		assertEquals(2,res);
+	}
+	@Test
+	public void testMaxElem_one()
+	{	
+		int []n = {2};
+		int res = HW3.maxElem(n);
+		assertEquals(2,res);
+	}
+	@Test (expected = IllegalArgumentException.class)
+	public void testMaxElem_0()
+	{	
+		int []n = {};
+		HW3.maxElem(n);
+	}
+	@Test (expected = IllegalArgumentException.class)
+	public void testMaxElem_null()
+	{	
+		int []n=null;
+		HW3.maxElem(n);		
+	}
+
+	//======================
+	//minInd
+	//======================
+
+	@Test
+	public void testMinInd_many()
+	{	
+		int []n = {1,2,3};
+		int res = HW3.minInd(n);
+		assertEquals(0,res);
+	}
+	@Test
+	public void testMinInd_two()
+	{	
+		int []n = {-1,2};
+		int res = HW3.minInd(n);
+		assertEquals(0,res);
+	}
+	@Test
+	public void testMinInd_one()
+	{	
+		int []n = {2};
+		int res = HW3.minInd(n);
+		assertEquals(0,res);
+	}
+	@Test (expected = IllegalArgumentException.class)
+	public void testMinInd_0()
+	{	
+		int []n = {};
+		HW3.minInd(n);
+	}
+	@Test (expected = IllegalArgumentException.class)
+	public void testMinInd_null()
+	{	
+		int []n=null;
+		HW3.minInd(n);		
+	}
+
+	//======================
+	//maxInd
+	//======================
+
+	@Test
+	public void testMaxInd_many()
+	{	
+		int []n = {1,2,3};
+		int res = HW3.maxInd(n);
+		assertEquals(2,res);
+	}
+	@Test
+	public void testMaxInd_two()
+	{	
+		int []n = {-1,2};
+		int res = HW3.maxInd(n);
+		assertEquals(1,res);
+	}
+	@Test
+	public void testMaxInd_one()
+	{	
+		int []n = {2};
+		int res = HW3.maxInd(n);
+		assertEquals(0,res);
+	}
+	@Test (expected = IllegalArgumentException.class)
+	public void testMaxInd_0()
+	{	
+		int []n = {};
+		HW3.maxInd(n);
+	}
+	@Test (expected = IllegalArgumentException.class)
+	public void testMaxInd_null()
+	{	
+		int []n=null;
+		HW3.maxInd(n);		
+	}
+
+	//======================
+	//sumOddEl
+	//======================
+	
+	
+}
