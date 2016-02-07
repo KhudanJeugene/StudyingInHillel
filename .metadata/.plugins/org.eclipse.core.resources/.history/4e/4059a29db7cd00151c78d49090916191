@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Add two numbers</title>
+</head>
+<body>
+	<input type="text" id="a" value="1">
+	<br>
+	<input type="text" id="b" value="2">
+	<br>
+	<input type="text" id="res" value="3">
+	<br>
+	<input type="button" value="Calculate" onclick="calc">
+
+	<script type="text/javascript">
+		function calc() 
+		{
+			val a = document.getElementById(a);
+			val b = document.getElementByld(b));
+			val c = a+b;
+			document.writeln(c);
+		}
+	</script>
+</body>
+</html>

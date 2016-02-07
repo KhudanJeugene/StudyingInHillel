@@ -1,0 +1,15 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Add two numbers</title>
+<script type="text/javascript" src ="calc.js"></script>
+</head>
+<body>
+	
+		First <input type="text" id="txt1"/> <br> 
+		Second <input type="text" id="txt2"> <br> 
+		Result <input type="text" id="res"><br> 
+		<input type="button" value="Calculate" onClick="calc()"/>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Add two numbers</title>
+</head>
+<body>
+	<form name="form1">
+		First <input type="text" name="txt1"> <br> 
+		Second <input type="text" name="txt2"> <br> 
+		Result <input type="text" name="res"><br> 
+		<input type="button" value="Calculate" onclick="calc();">
+
+	</form>
+	<script type="text/javascript">
+	function calc()
+	{
+		var a = document.form1.txt1.value;
+		var b = document.form1.txt2.value;
+		var res = a + b;
+		document.form1.res.value=s;
+	}
+	</script>
+</body>
+</html>
