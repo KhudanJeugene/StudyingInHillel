@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sum of two numbers</title>
+
+<script>
+		function add() 
+		{
+			var a = parseInt(document.getElementById('a').value);
+			var b = parseInt(document.getElementById('b').value);
+			if (isNaN(a)==true) a=0;
+			if (isNaN(b)==true) b=0;
+			var val = a + b;
+			
+		}
+		</script>
+</head>
+<body>
+	<form>
+		<input id="a" type="text"><br> 
+		<input id="b" type="text"><br>		
+		<input id="c" type="text" value = "<? echo &val; ?>"><br>
+		<input type="button" value="Calculate" onclick="add();"><br>
+	</form>
+</body>
+</html>

@@ -11,7 +11,7 @@ public class MergeSort {
 	{
 		for (int i:arr) System.out.print(i + " ");
 	}
-	private static void sortMerge(int[] arr) {
+	public static void sortMerge(int[] arr) {
 		int len = arr.length;
 		int n = 1; 
 		int shift;

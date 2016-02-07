@@ -495,4 +495,126 @@ public class HW3Test
 		int[] n =null;
 		HW3.quickSort(n);
 	}
+	
+	//======================
+	//sortMerge
+	//======================
+	
+	@Test
+	public void testSortMerge_many()
+	{
+		int[] n = {5,4,3,2,1};
+		HW3.sortMerge(n);
+		int[] res = {1,2,3,4,5};
+		assertArrayEquals(res, n);
+	}
+	@Test
+	public void testSortMerge_two()
+	{
+		int[] n = {3,2};
+		HW3.sortMerge(n);
+		int[] res = {2,3};
+		assertArrayEquals(res, n);
+	}
+	@Test
+	public void testSortMerge_one()
+	{
+		int[] n = {1};
+		HW3.sortMerge(n);
+		int[] res = {1};
+		assertArrayEquals(res, n);
+	}
+	@Test (expected = IllegalArgumentException.class)
+	public void testSortMerge_0()
+	{
+		int[] n ={};
+		HW3.sortMerge(n);
+	}
+	@Test (expected = IllegalArgumentException.class)
+	public void testSortMerge_null()
+	{
+		int[] n =null;
+		HW3.sortMerge(n);
+	}
+	
+	//=========================
+	//sortShell
+	//=========================
+	@Test
+	public void testSortShell_many()
+	{
+		int[] n = {5,4,3,2,1};
+		HW3.sortShell(n);
+		int[] res = {1,2,3,4,5};
+		assertArrayEquals(res, n);
+	}
+	@Test
+	public void testSortShel_two()
+	{
+		int[] n = {3,2};
+		HW3.sortShell(n);
+		int[] res = {2,3};
+		assertArrayEquals(res, n);
+	}
+	@Test
+	public void testSortShel_one()
+	{
+		int[] n = {1};
+		HW3.sortShell(n);
+		int[] res = {1};
+		assertArrayEquals(res, n);
+	}
+	@Test (expected = IllegalArgumentException.class)
+	public void testSortShel_0()
+	{
+		int[] n ={};
+		HW3.sortShell(n);
+	}
+	@Test (expected = IllegalArgumentException.class)
+	public void testSortShel_null()
+	{
+		int[] n =null;
+		HW3.sortShell(n);
+	}
+	
+	//=====================
+	//sortHeap
+	//=====================
+	
+	@Test
+	public void testSortHeap_many()
+	{
+		int[] n = {5,4,3,2,1};
+		HW3.sortHeap(n);
+		int[] res = {1,2,3,4,5};
+		assertArrayEquals(res, n);
+	}
+	@Test
+	public void testSortHeap_two()
+	{
+		int[] n = {3,2};
+		HW3.sortHeap(n);
+		int[] res = {2,3};
+		assertArrayEquals(res, n);
+	}
+	@Test
+	public void testSortHeap_one()
+	{
+		int[] n = {1};
+		HW3.sortHeap(n);
+		int[] res = {1};
+		assertArrayEquals(res, n);
+	}
+	@Test (expected = IllegalArgumentException.class)
+	public void testSortHeap_0()
+	{
+		int[] n ={};
+		HW3.sortHeap(n);
+	}
+	@Test (expected = IllegalArgumentException.class)
+	public void testSortHeap_null()
+	{
+		int[] n =null;
+		HW3.sortHeap(n);
+	}
 }

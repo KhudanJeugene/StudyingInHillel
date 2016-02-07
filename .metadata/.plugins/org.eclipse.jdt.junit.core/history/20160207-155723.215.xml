@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="HW3Test" project="Array" tests="77" started="77" failures="3" errors="3" ignored="0">
+  <testsuite name="HW3Test" time="0.047">
+    <testcase name="testSortSelect_0" classname="HW3Test" time="0.0"/>
+    <testcase name="testSortBubble_many" classname="HW3Test" time="0.0"/>
+    <testcase name="testSortBubble_null" classname="HW3Test" time="0.0"/>
+    <testcase name="testMaxInd_one" classname="HW3Test" time="0.0"/>
+    <testcase name="testMaxInd_two" classname="HW3Test" time="0.0"/>
+    <testcase name="testSortSelect_one" classname="HW3Test" time="0.0"/>
+    <testcase name="testSortSelect_two" classname="HW3Test" time="0.001"/>
+    <testcase name="testSumOddEl_0" classname="HW3Test" time="0.0"/>
+    <testcase name="testSortHeap_0" classname="HW3Test" time="0.009">
+      <failure>java.lang.AssertionError: Expected exception: java.lang.IllegalArgumentException&#13;
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:32)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
+&#13;
+</failure>
+    </testcase>
+    <testcase name="testSortIns_one" classname="HW3Test" time="0.0"/>
+    <testcase name="testSortIns_two" classname="HW3Test" time="0.001"/>
+    <testcase name="testReverseArr_evenMany" classname="HW3Test" time="0.0"/>
+    <testcase name="testCalcCount_one" classname="HW3Test" time="0.0"/>
+    <testcase name="testCalcCount_two" classname="HW3Test" time="0.001"/>
+    <testcase name="testSortShel_0" classname="HW3Test" time="0.002">
+      <failure>java.lang.AssertionError: Expected exception: java.lang.IllegalArgumentException&#13;
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:32)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
+&#13;
+</failure>
+    </testcase>
+    <testcase name="testSortMerge_many" classname="HW3Test" time="0.0"/>
+    <testcase name="testSortMerge_null" classname="HW3Test" time="0.002">
+      <error>java.lang.Exception: Unexpected exception, expected&lt;java.lang.IllegalArgumentException&gt; but was&lt;java.lang.NullPointerException&gt;&#13;
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:28)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
+Caused by: java.lang.NullPointerException&#13;
+	at HW3.sortMerge(HW3.java:230)&#13;
+	at HW3Test.testSortMerge_null(HW3Test.java:537)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)&#13;
+	at java.lang.reflect.Method.invoke(Unknown Source)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)&#13;
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)&#13;
+	... 15 more&#13;
+&#13;
+</error>
+    </testcase>
+    <testcase name="testQuickSort_many" classname="HW3Test" time="0.001"/>
+    <testcase name="testQuickSort_null" classname="HW3Test" time="0.0"/>
+    <testcase name="testSortMerge_one" classname="HW3Test" time="0.001"/>
+    <testcase name="testSortMerge_two" classname="HW3Test" time="0.0"/>
+    <testcase name="testSortShel_null" classname="HW3Test" time="0.001">
+      <error>java.lang.Exception: Unexpected exception, expected&lt;java.lang.IllegalArgumentException&gt; but was&lt;java.lang.NullPointerException&gt;&#13;
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:28)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
+Caused by: java.lang.NullPointerException&#13;
+	at HW3.sortShell(HW3.java:284)&#13;
+	at HW3Test.testSortShel_null(HW3Test.java:577)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)&#13;
+	at java.lang.reflect.Method.invoke(Unknown Source)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)&#13;
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)&#13;
+	... 15 more&#13;
+&#13;
+</error>
+    </testcase>
+    <testcase name="testMinInd_0" classname="HW3Test" time="0.0"/>
+    <testcase name="testMaxElem_many" classname="HW3Test" time="0.001"/>
+    <testcase name="testMaxElem_null" classname="HW3Test" time="0.001"/>
+    <testcase name="testSortBubble_0" classname="HW3Test" time="0.0"/>
+    <testcase name="testQuickSort_0" classname="HW3Test" time="0.001"/>
+    <testcase name="testMaxElem_0" classname="HW3Test" time="0.0"/>
+    <testcase name="testReverseArr_oddMany" classname="HW3Test" time="0.0"/>
+    <testcase name="testMinElem_many" classname="HW3Test" time="0.001"/>
+    <testcase name="testMinElem_null" classname="HW3Test" time="0.0"/>
+    <testcase name="testSortShell_many" classname="HW3Test" time="0.0"/>
+    <testcase name="testSortHeap_one" classname="HW3Test" time="0.001"/>
+    <testcase name="testSortHeap_two" classname="HW3Test" time="0.0"/>
+    <testcase name="testSortBubble_one" classname="HW3Test" time="0.0"/>
+    <testcase name="testSortBubble_two" classname="HW3Test" time="0.001"/>
+    <testcase name="testSortShel_one" classname="HW3Test" time="0.0"/>
+    <testcase name="testSortShel_two" classname="HW3Test" time="0.0"/>
+    <testcase name="testMinElem_0" classname="HW3Test" time="0.0"/>
+    <testcase name="testMinInd_one" classname="HW3Test" time="0.001"/>
+    <testcase name="testMinInd_two" classname="HW3Test" time="0.0"/>
+    <testcase name="testSortIns_0" classname="HW3Test" time="0.0"/>
+    <testcase name="testQuickSort_one" classname="HW3Test" time="0.0"/>
+    <testcase name="testQuickSort_two" classname="HW3Test" time="0.001"/>
+    <testcase name="testMinElem_one" classname="HW3Test" time="0.0"/>
+    <testcase name="testMinElem_two" classname="HW3Test" time="0.0"/>
+    <testcase name="testMinInd_many" classname="HW3Test" time="0.0"/>
+    <testcase name="testMinInd_null" classname="HW3Test" time="0.001"/>
+    <testcase name="testReverse_Odd" classname="HW3Test" time="0.0"/>
+    <testcase name="testReverseArr_5" classname="HW3Test" time="0.0"/>
+    <testcase name="testReverseArr_6" classname="HW3Test" time="0.001"/>
+    <testcase name="testReverse_many" classname="HW3Test" time="0.0"/>
+    <testcase name="testSumOddEl_one" classname="HW3Test" time="0.0"/>
+    <testcase name="testSumOddEl_two" classname="HW3Test" time="0.0"/>
+    <testcase name="testReverse_3" classname="HW3Test" time="0.0"/>
+    <testcase name="testReverse_4" classname="HW3Test" time="0.001"/>
+    <testcase name="testReverse_5" classname="HW3Test" time="0.0"/>
+    <testcase name="testReverse_6" classname="HW3Test" time="0.0"/>
+    <testcase name="testMaxInd_0" classname="HW3Test" time="0.0"/>
+    <testcase name="testReverseArr_one" classname="HW3Test" time="0.001"/>
+    <testcase name="testReverseArr_two" classname="HW3Test" time="0.0"/>
+    <testcase name="testMaxElem_one" classname="HW3Test" time="0.0"/>
+    <testcase name="testMaxElem_two" classname="HW3Test" time="0.0"/>
+    <testcase name="testCalcCount_0" classname="HW3Test" time="0.001"/>
+    <testcase name="testMaxInd_many" classname="HW3Test" time="0.0"/>
+    <testcase name="testMaxInd_null" classname="HW3Test" time="0.0"/>
+    <testcase name="testSortMerge_0" classname="HW3Test" time="0.001">
+      <failure>java.lang.AssertionError: Expected exception: java.lang.IllegalArgumentException&#13;
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:32)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
+&#13;
+</failure>
+    </testcase>
+    <testcase name="testSortIns_many" classname="HW3Test" time="0.0"/>
+    <testcase name="testSortIns_null" classname="HW3Test" time="0.001"/>
+    <testcase name="testSumOddEl_many" classname="HW3Test" time="0.0"/>
+    <testcase name="testSumOddEl_null" classname="HW3Test" time="0.0"/>
+    <testcase name="testSortSelect_many" classname="HW3Test" time="0.0"/>
+    <testcase name="testSortSelect_null" classname="HW3Test" time="0.001"/>
+    <testcase name="testSortHeap_many" classname="HW3Test" time="0.0"/>
+    <testcase name="testSortHeap_null" classname="HW3Test" time="0.002">
+      <error>java.lang.Exception: Unexpected exception, expected&lt;java.lang.IllegalArgumentException&gt; but was&lt;java.lang.NullPointerException&gt;&#13;
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:28)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
+Caused by: java.lang.NullPointerException&#13;
+	at HW3.sortHeap(HW3.java:335)&#13;
+	at HW3Test.testSortHeap_null(HW3Test.java:618)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)&#13;
+	at java.lang.reflect.Method.invoke(Unknown Source)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)&#13;
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)&#13;
+	... 15 more&#13;
+&#13;
+</error>
+    </testcase>
+    <testcase name="testCalcCount_many" classname="HW3Test" time="0.001"/>
+    <testcase name="testCalcCount_null" classname="HW3Test" time="0.001"/>
+  </testsuite>
+</testrun>

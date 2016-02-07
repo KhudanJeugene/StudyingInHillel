@@ -1,0 +1,12 @@
+package mainMethods;
+
+public class BumberToWordsBill
+{
+
+	public static void main(String[] args)
+	{
+		// TODO Auto-generated method stub
+
+	}
+
+}
