@@ -8,10 +8,10 @@
 			var op = document.getElementById('s').value;
 			var b = parseInt(document.getElementById('b').value);
 			var c = 0;
-			if(op == '+') c = a+b;
-			else if(op == '-') c = a-b;
-			else if(op == '*') c = a*b;
-			else if(op == '/') c = a/b;
+			if(op = '+')	c = a+b;
+			else if(op = '-') c = a-b;
+			else if(op = '*') c = a*b;
+			else if(op = '/') c = a/b;
 			document.getElementById('res').value = c;
 		}
 		</script>

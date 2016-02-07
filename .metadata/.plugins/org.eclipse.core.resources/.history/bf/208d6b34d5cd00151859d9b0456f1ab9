@@ -4,14 +4,26 @@
 		<script>
 		function calc() 
 		{
-			var a = parseInt(document.getElementById('a').value);
-			var op = document.getElementById('s').value;
-			var b = parseInt(document.getElementById('b').value);
-			var c = 0;
-			if(op == '+') c = a+b;
-			else if(op == '-') c = a-b;
-			else if(op == '*') c = a*b;
-			else if(op == '/') c = a/b;
+			var a1 = parseInt(document.getElementById('a').value);
+			var d = parseInt(document.getElementByld('s').value);
+			var b1 = parseInt(document.getElementById('b').value);
+			var c1 = 0;
+			if(d == 1)
+			{
+				c = a+b;
+			}
+			else if(d == 2)
+			{
+				c = a1-b;
+			}
+			else if(d == 3)
+			{
+				c = a*b;
+			}
+			else if(d == 4)
+			{
+				c = a/b;
+			}
 			document.getElementById('res').value = c;
 		}
 		</script>

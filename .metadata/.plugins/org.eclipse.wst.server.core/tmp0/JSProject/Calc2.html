@@ -5,27 +5,13 @@
 		function calc() 
 		{
 			var a = parseInt(document.getElementById('a').value);
-			var do = document.getElementByld('s').charAt;
+			var op = document.getElementById('s').value;
 			var b = parseInt(document.getElementById('b').value);
 			var c = 0;
-			if(do == "+")
-			{
-				c = a+b;
-			}
-			else if(do == "-")
-			{
-				c = a-b;
-			}
-			else if(do == "*")
-			{
-				c = a*b;
-			}
-			else if(do=="/")
-			{
-				c = a/b;
-			}
-	
-			c = a+b;
+			if(op == '+') c = a+b;
+			else if(op == '-') c = a-b;
+			else if(op == '*') c = a*b;
+			else if(op == '/') c = a/b;
 			document.getElementById('res').value = c;
 		}
 		</script>
