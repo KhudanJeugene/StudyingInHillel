@@ -143,6 +143,7 @@ public class AList0
 	{
 		ar[pos] = val;
 	}
+	
 	public int get(int pos)
 	{
 		return ar[pos];
