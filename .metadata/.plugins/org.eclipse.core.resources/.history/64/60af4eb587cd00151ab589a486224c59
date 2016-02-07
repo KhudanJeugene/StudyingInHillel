@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Add two numbers</title>
+</head>
+<body>
+<input type = "text" id = "txt1"/><br>
+<input type = "text" id = "txt2"/><br>
+<input type = "text" id = "txt3"/><br>
+<input type = "button" value = "Calc" onclick = "calc()"> 
+<script type="text/javascript">
+function calc()
+{
+	}
+</script>
+</body>
+</html>

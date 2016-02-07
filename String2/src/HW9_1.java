@@ -25,7 +25,7 @@ public class HW9_1 {
 
 	public static void outASCII()
 	{
-		for (byte i=0; i<=126; i++)
+		for (byte i=32; i<=126; i++)
 			System.out.print(Character.toChars(i));
 	}
 }

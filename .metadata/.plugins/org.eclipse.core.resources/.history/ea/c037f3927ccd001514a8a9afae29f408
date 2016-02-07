@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src = "Sum.js"></script>
+</head>
+<body>
+<input type = "text" id = "txt1"/><br>
+<input type = "text" id = "txt2"/><br>
+<input type = "text" id = "txt3"/><br>
+<input type = "button" value = "Calc" onclick = add()/>
+</body>
+</html>

@@ -15,26 +15,14 @@ public class HW9_2
 	public static int stringToInt(String s)
 	{
 		int res = 0;
-		try
-		{
-			res = Integer.parseInt(s);
-		}
-		catch(NumberFormatException e)
-		{
-		}
+		res = Integer.parseInt(s);
 		return res;
 	}
 
 	public static double stringToDouble(String s)
 	{
 		double res= 0;
-		try
-		{
-			res = Double.parseDouble(s);
-		}
-		catch(NumberFormatException e)
-		{		
-		}
+		res = Double.parseDouble(s);
 		return res;
 	}
 }
