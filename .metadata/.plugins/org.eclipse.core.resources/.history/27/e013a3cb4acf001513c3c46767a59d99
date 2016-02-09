@@ -1048,7 +1048,7 @@ public class AList0Test
 	//======================
 
 	@Test
-	public void testSort_many() 
+	public void testSortSelect_many() 
 	{
 		int[] ar = {10,20,30,88,41,65,71};
 		AList0 rr = new AList0(ar);
@@ -1078,7 +1078,7 @@ public class AList0Test
 		assertArrayEquals(exp,act);
 	}
 	@Test
-	public void testSort_0() 
+	public void testSortSelect_0() 
 	{
 		int[] ar = {};
 		AList0 rr = new AList0(ar);

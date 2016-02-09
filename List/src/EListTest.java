@@ -1080,7 +1080,7 @@ public class EListTest
 	//======================
 
 	@Test
-	public void testSortSelect_many() 
+	public void testSort_many() 
 	{
 		int[] ar = {10,20,30,88,41,65,71};
 		rr.init(ar);
@@ -1110,7 +1110,7 @@ public class EListTest
 		assertArrayEquals(exp,act);
 	}
 	@Test
-	public void testSortSelect_0() 
+	public void testSort_0() 
 	{
 		int[] ar = {};
 		rr.init(ar);
