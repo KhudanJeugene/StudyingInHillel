@@ -1,4 +1,4 @@
-public class AList2
+public class AList2 implements EList
 {
 	int[] ar = new int[30];
 	
@@ -13,6 +13,7 @@ public class AList2
 		init(ini);
 	}
 	
+	@Override
 	public void init(int[] a)
 	{
 		if (a == null)
@@ -33,11 +34,13 @@ public class AList2
 		}
 	}
 	
+	@Override
 	public int size()
 	{
 		return end-start;
 	}
 	
+	@Override
 	public void clear()
 	{
 		ar = new int[30];
@@ -45,6 +48,7 @@ public class AList2
 		end = 15;
 	}
 	
+	@Override
 	public int [] toArray()
 	{
 		int[] temp = new int[end - start];
@@ -54,6 +58,7 @@ public class AList2
 		return temp;
 	}
 	
+	@Override
 	public String toString()
 	{
 		String str = "{";
@@ -65,6 +70,7 @@ public class AList2
 		return str;
 	}
 	
+	@Override
 	public void addStart(int val)
 	{
 		ar[--start] = val;	
@@ -75,6 +81,7 @@ public class AList2
 		ar[end++] = val;
 	}
 	
+	@Override
 	public void addPos(int pos, int val)
 	{
 		if (pos+start<start-1 || pos+start>end)
@@ -88,6 +95,7 @@ public class AList2
 		end++;
 	}
 	
+	@Override
 	public int delStart()
 	{
 		if (end - start == 0)
@@ -98,6 +106,7 @@ public class AList2
 		return delVal;
 	}
 	
+	@Override
 	public int delEnd()
 	{
 		if (end - start == 0)
@@ -108,13 +117,11 @@ public class AList2
 		return delVal;
 	}
 	
+	@Override
 	public int delPos(int pos)
 	{
-		if (end - start == 0)
+		if (end - start == 0 || pos+start < start-1 || pos > end)
 			throw new IllegalArgumentException();
-		
-		if(pos+start < start-1 || pos > end)
-			throw new ArrayIndexOutOfBoundsException();
 
 		int delVal = ar[pos + start];
 		for(int i = pos + start; i < end; i++)
@@ -125,6 +132,7 @@ public class AList2
 		return delVal;
 	}
 	
+	@Override
 	public void set(int pos, int val)
 	{
 		if (pos + start < start || pos + start >= end)
@@ -141,6 +149,7 @@ public class AList2
 		return ar[pos + start];
 	}
 	
+	@Override
 	public int minElem()
 	{		
 		if (end - start == 0) 	
@@ -157,6 +166,7 @@ public class AList2
 		return min;
 	}
 
+	@Override
 	public int maxElem()
 	{
 		if (end - start == 0) 		
@@ -173,6 +183,7 @@ public class AList2
 		return max;	
 	}
 
+	@Override
 	public int minInd()
 	{
 		if (end - start == 0) 
@@ -190,6 +201,7 @@ public class AList2
 		return ind - start;
 	}
 
+	@Override
 	public int maxInd()
 	{
 		if (end - start == 0) 
@@ -206,6 +218,7 @@ public class AList2
 		return ind - start;
 	}
 
+	@Override
 	public void reverse()
 	{	
 		for (int i=start; i<start + (end - start)/2; i++)
@@ -217,6 +230,7 @@ public class AList2
 		}
 	}
 
+	@Override
 	public  void reverseHalf()
 	{
 		int d = ((end - start)%2 == 0) ? 0 : 1;
@@ -229,7 +243,8 @@ public class AList2
 		}
 	}
 	
-	public void sortSelect()
+	@Override
+	public void sort()
 	{
 		for (int i=start;i<end-1;i++)
 		{

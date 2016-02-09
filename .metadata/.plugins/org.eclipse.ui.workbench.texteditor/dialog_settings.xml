@@ -2,30 +2,30 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="ChangeSymb" key="selection"/>
+		<item value="rr.init(ar);" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="EList rr = new AList0(ar);"/>
+			<item value="AList0 rr"/>
+			<item value="public"/>
+			<item value=")"/>
 			<item value="FindShor"/>
 			<item value="ChangeSymb"/>
 			<item value="AList1"/>
 			<item value="AList0"/>
-			<item value="int []"/>
-			<item value="int []ar"/>
-			<item value="one"/>
-			<item value="two"/>
 		</list>
 		<list key="replacehistory">
+			<item value="rr.init(ar);"/>
+			<item value="EList rr"/>
+			<item value="EList"/>
+			<item value="@Override public"/>
+			<item value=");"/>
 			<item value="ChangeSymb"/>
 			<item value="AList2"/>
 			<item value="AList1"/>
-			<item value="int[] "/>
-			<item value="1"/>
-			<item value="2"/>
-			<item value="rra"/>
-			<item value="ar"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

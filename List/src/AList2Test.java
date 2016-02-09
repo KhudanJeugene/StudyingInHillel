@@ -575,7 +575,7 @@ public class AList2Test
 		assertArrayEquals(exp,act);
 
 	}
-	@Test(expected = ArrayIndexOutOfBoundsException.class)
+	@Test(expected = IllegalArgumentException.class)
 	public void testDelPos_manyExc()
 	{
 		int[] ar = {10,20,30,88,41,65};
@@ -1052,47 +1052,47 @@ public class AList2Test
 	{
 		int[] ar = {10,20,30,88,41,65,71};
 		AList2 rr = new AList2(ar);
-		rr.sortSelect();
+		rr.sort();
 		int[] exp = {10,20,30,41,65,71,88};
 		int[] act = rr.toArray();
 		assertArrayEquals(exp,act);
 	}
 	@Test
-	public void testSortSelect_2() 
+	public void testSort_2() 
 	{
 		int[] ar = {20,10};
 		AList2 rr = new AList2(ar);
-		rr.sortSelect();
+		rr.sort();
 		int[] exp = {10,20};
 		int[] act = rr.toArray();
 		assertArrayEquals(exp,act);
 	}
 	@Test
-	public void testSortSelect_1() 
+	public void testSort_1() 
 	{
 		int[] ar = {10};
 		AList2 rr = new AList2(ar);
-		rr.sortSelect();
+		rr.sort();
 		int[] exp = {10};
 		int[] act = rr.toArray();
 		assertArrayEquals(exp,act);
 	}
 	@Test
-	public void testSortSelect_0() 
+	public void testSort_0() 
 	{
 		int[] ar = {};
 		AList2 rr = new AList2(ar);
-		rr.sortSelect();
+		rr.sort();
 		int[] exp = {};
 		int[] act = rr.toArray();
 		assertArrayEquals(exp,act);
 	}
 	@Test
-	public void testSortSelect_null() 
+	public void testSort_null() 
 	{
 		int[] ar = null;
 		AList2 rr = new AList2(ar);
-		rr.sortSelect();
+		rr.sort();
 		int[] exp = {};
 		int[] act = rr.toArray();
 		assertArrayEquals(exp,act);

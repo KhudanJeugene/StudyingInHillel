@@ -55,7 +55,7 @@ public class AList0Test
 	}
 
 	//==================
-	 //Clear
+	//Clear
 	//===================
 	@Test 
 	public void testClear_many()
@@ -157,11 +157,11 @@ public class AList0Test
 		int[] exp = {};
 		int[] act = rr.toArray();
 		assertArrayEquals(exp,act);
-		
+
 	}
 
 	//======================
-	 //toString
+	//toString
 	//======================
 
 	@Test
@@ -221,6 +221,8 @@ public class AList0Test
 		AList0 rr = new AList0(ar);
 		int add = 55;		
 		rr.addStart(add);
+		int s = rr.size();
+		assertEquals(7,s);
 		int[] exp = {55,10,20,30,88,41,65};
 		int[] act = rr.toArray();		
 		assertArrayEquals(exp,act);
@@ -232,6 +234,8 @@ public class AList0Test
 		AList0 rr = new AList0(ar);
 		int add = 55;	
 		rr.addStart(add);
+		int s = rr.size();
+		assertEquals(3,s);
 		int[] exp = {55,10,20};
 		int[] act = rr.toArray();	
 		assertArrayEquals(exp,act);
@@ -243,6 +247,8 @@ public class AList0Test
 		AList0 rr = new AList0(ar);
 		int add = 55;	
 		rr.addStart(add);
+		int s = rr.size();
+		assertEquals(2,s);
 		int[] exp = {55,10};
 		int[] act = rr.toArray();		
 		assertArrayEquals(exp,act);
@@ -254,6 +260,8 @@ public class AList0Test
 		AList0 rr = new AList0(ar);
 		int add = 55;	
 		rr.addStart(add);
+		int s = rr.size();
+		assertEquals(1,s);
 		int[] exp = {55};
 		int[] act = rr.toArray();
 		assertArrayEquals(exp,act);
@@ -265,10 +273,12 @@ public class AList0Test
 		AList0 rr = new AList0(ar);
 		int add = 55;
 		rr.addStart(add);
+		int s = rr.size();
+		assertEquals(1,s);
 		int[] exp = {55};
 		int[] act = rr.toArray();
 		assertArrayEquals(exp,act);
-		
+
 	}
 
 	//======================
@@ -282,6 +292,8 @@ public class AList0Test
 		AList0 rr = new AList0(ar);
 		int add = 55;	
 		rr.addEnd(add);
+		int s = rr.size();
+		assertEquals(7,s);
 		int[] exp = {10,20,30,88,41,65,55};
 		int[] act = rr.toArray();
 		assertArrayEquals(exp,act);
@@ -293,6 +305,8 @@ public class AList0Test
 		AList0 rr = new AList0(ar);
 		int add = 55;	
 		rr.addEnd(add);
+		int s = rr.size();
+		assertEquals(3,s);
 		int[] exp = {10,20,55};
 		int[] act = rr.toArray();
 		assertArrayEquals(exp,act);
@@ -304,6 +318,8 @@ public class AList0Test
 		AList0 rr = new AList0(ar);
 		int add = 55;	
 		rr.addEnd(add);
+		int s = rr.size();
+		assertEquals(2,s);
 		int[] exp = {10,55};
 		int[] act = rr.toArray();
 		assertArrayEquals(exp, act);
@@ -315,6 +331,8 @@ public class AList0Test
 		AList0 rr = new AList0(ar);
 		int add = 55;	
 		rr.addEnd(add);
+		int s = rr.size();
+		assertEquals(1,s);
 		int[] exp = {55};
 		int[] act = rr.toArray();
 		assertArrayEquals(exp, act);
@@ -326,6 +344,8 @@ public class AList0Test
 		AList0 rr = new AList0(ar);
 		int add = 55;	
 		rr.addEnd(add);
+		int s = rr.size();
+		assertEquals(1,s);
 		int[] exp = {55};
 		int[] act = rr.toArray();
 		assertArrayEquals(exp, act);
@@ -343,6 +363,8 @@ public class AList0Test
 		int pos = 2;
 		int val = 55;		
 		rr.addPos(pos, val);
+		int s = rr.size();
+		assertEquals(7,s);
 		int[] exp= {10,20,55,30,88,41,65};
 		int[] act = rr.toArray();
 		assertArrayEquals(exp,act);
@@ -355,6 +377,8 @@ public class AList0Test
 		int pos = 2;
 		int val = 55;		
 		rr.addPos(pos, val);
+		int s = rr.size();
+		assertEquals(3,s);
 		int[] exp = {10,20,55};
 		int[] act = rr.toArray();
 		assertArrayEquals(exp,act);
@@ -367,6 +391,8 @@ public class AList0Test
 		int pos = 1;
 		int val = 55;		
 		rr.addPos(pos, val);
+		int s = rr.size();
+		assertEquals(2,s);
 		int[] exp = {10,55};
 		int[] act = rr.toArray();
 		assertArrayEquals(exp,act);
@@ -388,6 +414,8 @@ public class AList0Test
 		int pos = 0;
 		int val = 55;		
 		rr.addPos(pos, val);
+		int s = rr.size();
+		assertEquals(1,s);
 		int[] exp = {55};
 		int[] act = rr.toArray();
 		assertArrayEquals(exp,act);
@@ -411,9 +439,10 @@ public class AList0Test
 		rr.addPos(pos,val);
 	}
 
-	/*---------------------
-	 Test function delStart
-	 ---------------------*/
+	//======================
+	//delStart
+	//======================
+
 
 	@Test
 	public void testDelStart_many() 
@@ -421,9 +450,12 @@ public class AList0Test
 		int[] ar = {10,20,30,88,41,65};
 		AList0 rr = new AList0(ar);
 		int resVal = rr.delStart();
-		int[] res = {20,30,88,41,65};
-		assertArrayEquals(res,rr.toArray());
 		assertEquals(10,resVal);
+		int s = rr.size();
+		assertEquals(5,s);
+		int[] exp = {20,30,88,41,65};
+		int[] act = rr.toArray();
+		assertArrayEquals(exp,act);
 	}
 	@Test
 	public void testDelStart_2() 
@@ -431,9 +463,12 @@ public class AList0Test
 		int[] ar = {10,20};
 		AList0 rr = new AList0(ar);
 		int resVal = rr.delStart();
-		int[] res = {20};
-		assertArrayEquals(res,rr.toArray());
 		assertEquals(10,resVal);
+		int s = rr.size();
+		assertEquals(1,s);
+		int[] exp = {20};
+		int[] act = rr.toArray();
+		assertArrayEquals(exp,act);
 	}
 	@Test
 	public void testDelStart_1() 
@@ -441,11 +476,14 @@ public class AList0Test
 		int[] ar = {10};
 		AList0 rr = new AList0(ar);
 		int resVal = rr.delStart();
-		int[] res = {};
-		assertArrayEquals(res,rr.toArray());
 		assertEquals(10,resVal);
+		int s = rr.size();
+		assertEquals(0,s);
+		int[] exp = {};
+		int[] act = rr.toArray();
+		assertArrayEquals(exp,act);
 	}
-	@Test (expected = NegativeArraySizeException.class)
+	@Test (expected = IllegalArgumentException.class)
 	public void testDelStart_0() 
 	{
 		int[] ar = {};
@@ -460,9 +498,9 @@ public class AList0Test
 		rr.delStart();
 	}
 
-	/*-------------------
-	 Test function delEnd
-	 ------------------*/
+	//======================
+	//delEnd
+	//======================
 
 	@Test
 	public void testDelEnd_many() 
@@ -470,9 +508,12 @@ public class AList0Test
 		int[] ar = {10,20,30,88,41,65};
 		AList0 rr = new AList0(ar);
 		int resVal = rr.delEnd();
-		int[] res = {10,20,30,88,41};
-		assertArrayEquals(res,rr.toArray());
 		assertEquals(65,resVal);
+		int s = rr.size();
+		assertEquals(5,s);
+		int[] exp = {10,20,30,88,41};
+		int[] act = rr.toArray();
+		assertArrayEquals(exp,act);;
 	}
 	@Test
 	public void testDelEnd_2() 
@@ -480,9 +521,12 @@ public class AList0Test
 		int[] ar = {10,20};
 		AList0 rr = new AList0(ar);
 		int resVal = rr.delEnd();
-		int[] res = {10};
 		assertEquals(20,resVal);
-		assertArrayEquals(res,rr.toArray());
+		int s = rr.size();
+		assertEquals(1,s);
+		int[] exp = {10};
+		int[] act = rr.toArray();
+		assertArrayEquals(exp,act);
 	}
 	@Test
 	public void testDelEnd_1() 
@@ -490,9 +534,12 @@ public class AList0Test
 		int[] ar = {10};
 		AList0 rr = new AList0(ar);
 		int resVal = rr.delEnd();
-		int[] res = {};
-		assertArrayEquals(res,rr.toArray());
 		assertEquals(10,resVal);
+		int s = rr.size();
+		assertEquals(0,s);
+		int[] exp = {};
+		int[] act = rr.toArray();
+		assertArrayEquals(exp,act);
 	}
 	@Test (expected = NegativeArraySizeException.class)
 	public void testDelEnd_0() 
@@ -501,7 +548,7 @@ public class AList0Test
 		AList0 rr = new AList0(ar);
 		rr.delEnd();
 	}
-	@Test (expected = IllegalArgumentException.class)
+	@Test (expected = NegativeArraySizeException.class)
 	public void testDelEnd_null()
 	{
 		int[] ar = null;
@@ -509,9 +556,9 @@ public class AList0Test
 		rr.delEnd();
 	}
 
-	/*-----------------------
-	 Test function testDelPos
-	 ----------------------*/
+	//======================
+	//delPos
+	//======================
 
 	@Test
 	public void testDelPos_many() 
@@ -520,16 +567,20 @@ public class AList0Test
 		AList0 rr = new AList0(ar);
 		int pos = 2;
 		int resVal = rr.delPos(pos);
-		int[] res = {10,20,88,41,65};
-		assertArrayEquals(res,rr.toArray());
 		assertEquals(30,resVal);
+		int s = rr.size();
+		assertEquals(5,s);
+		int[] exp = {10,20,88,41,65};
+		int[] act = rr.toArray();
+		assertArrayEquals(exp,act);
+
 	}
 	@Test(expected = ArrayIndexOutOfBoundsException.class)
 	public void testDelPos_manyExc()
 	{
 		int[] ar = {10,20,30,88,41,65};
 		AList0 rr = new AList0(ar);
-		int pos = 7;
+		int pos = -7;
 		rr.delPos(pos);
 	}
 	@Test
@@ -539,9 +590,12 @@ public class AList0Test
 		AList0 rr = new AList0(ar);
 		int pos = 1;
 		int resVal = rr.delPos(pos);
-		int[] res = {10};
-		assertArrayEquals(res,rr.toArray());
 		assertEquals(20,resVal);
+		int s = rr.size();
+		assertEquals(1,s);
+		int[] exp = {10};
+		int[] act = rr.toArray();
+		assertArrayEquals(exp,act);
 	}
 	@Test
 	public void testDelPos_1() 
@@ -550,11 +604,14 @@ public class AList0Test
 		AList0 rr = new AList0(ar);
 		int pos = 0;
 		int resVal = rr.delPos(pos);
-		int[] res = {};
-		assertArrayEquals(res,rr.toArray());
 		assertEquals(10,resVal);
+		int s = rr.size();
+		assertEquals(0,s);
+		int[] exp = {};
+		int[] act = rr.toArray();
+		assertArrayEquals(exp,act);
 	}
-	@Test (expected = NegativeArraySizeException.class)
+	@Test (expected = IllegalArgumentException.class)
 	public void testDelPos_0() 
 	{
 		int[] ar = {};
@@ -571,9 +628,9 @@ public class AList0Test
 		rr.delPos(pos);
 	}
 
-	/*-------------------
-	Test function testSet 
-	-------------------*/
+	//======================
+	//set
+	//======================
 
 	@Test
 	public void testSet_many() 
@@ -583,8 +640,9 @@ public class AList0Test
 		int pos = 2;
 		int val = 3;
 		rr.set(pos, val);
-		int[] res = {10,20,3,88,41,65};
-		assertArrayEquals(res,rr.toArray());
+		int[] exp = {10,20,3,88,41,65};
+		int[] act = rr.toArray();
+		assertArrayEquals(exp,act);
 	}
 	@Test (expected = ArrayIndexOutOfBoundsException.class)
 	public void testSet_manyExc() 
@@ -603,8 +661,9 @@ public class AList0Test
 		int pos = 1;
 		int val = 3;
 		rr.set(pos, val);
-		int[] res = {10,3};
-		assertArrayEquals(res,rr.toArray());
+		int[] exp = {10,3};
+		int[] act = rr.toArray();
+		assertArrayEquals(exp,act);
 	}
 	@Test
 	public void testSet_1() 
@@ -614,8 +673,9 @@ public class AList0Test
 		int pos = 0;
 		int val = 3;
 		rr.set(pos, val);
-		int[] res = {3};
-		assertArrayEquals(res,rr.toArray());
+		int[] exp = {3};
+		int[] act = rr.toArray();
+		assertArrayEquals(exp,act);
 	}
 	@Test (expected = ArrayIndexOutOfBoundsException.class)
 	public void testSet_0() 
@@ -626,7 +686,7 @@ public class AList0Test
 		int val = 3;		
 		rr.set(pos, val);
 	}
-	@Test (expected = IllegalArgumentException.class)
+	@Test (expected = ArrayIndexOutOfBoundsException.class)
 	public void testSet_null()
 	{
 		int[] ar = null;
@@ -636,9 +696,9 @@ public class AList0Test
 		rr.set(pos, val);
 	}
 
-	/*----------------
-	 Test function get
-	 ---------------*/
+	//======================
+	//get
+	//======================
 
 	@Test
 	public void testGet_many() 
@@ -646,8 +706,8 @@ public class AList0Test
 		int[] ar = {10,20,30,88,41,65};
 		AList0 rr = new AList0(ar);
 		int pos = 3;
-		int res = rr.get(pos);
-		assertEquals(88,res);
+		int act = rr.get(pos);
+		assertEquals(88,act);
 	}
 	@Test (expected = ArrayIndexOutOfBoundsException.class)
 	public void testGet_manyExc() 
@@ -663,8 +723,8 @@ public class AList0Test
 		int[] ar = {10,20};
 		AList0 rr = new AList0(ar);
 		int pos = 1;
-		int res = rr.get(pos);
-		assertEquals(20,res);
+		int act = rr.get(pos);
+		assertEquals(20,act);
 	}
 	@Test
 	public void testGet_1() 
@@ -683,7 +743,7 @@ public class AList0Test
 		int pos = 0;
 		rr.get(pos);
 	}
-	@Test (expected = IllegalArgumentException.class)
+	@Test (expected = ArrayIndexOutOfBoundsException.class)
 	public void testGet_null() 
 	{
 		int[] ar = null;
@@ -692,9 +752,9 @@ public class AList0Test
 		rr.get(pos);
 	}
 
-	/*--------------------
-	 Test function minElem
-	------------------- */
+	//======================
+	//minElem
+	//======================
 
 	@Test
 	public void testMinElem_many() 
@@ -735,9 +795,9 @@ public class AList0Test
 		rr.minElem();
 	}
 
-	/*--------------------
-	 Test function maxElem
-	 -------------------*/
+	//======================
+	//maxElem
+	//======================
 
 	@Test
 	public void testMaxElem_many() 
@@ -777,9 +837,9 @@ public class AList0Test
 		AList0 rr = new AList0(ar);
 		rr.maxElem();	
 	}
-	/*-------------------
-	 Test function minInd
-	 ------------------*/
+	//======================
+	//minInd
+	//======================
 
 	@Test
 	public void testMinInd_many() 
@@ -820,9 +880,9 @@ public class AList0Test
 		rr.minInd();
 	}
 
-	/*-------------------
-	 Test function maxInd
-	-------------------*/
+	//======================
+	//maxInd
+	//======================
 
 	@Test
 	public void testMaxInd_many() 
@@ -863,9 +923,9 @@ public class AList0Test
 		rr.maxInd();
 	}
 
-	/*--------------------
-	 Test function reverse
-	 -------------------*/
+	//======================
+	//reverse
+	//======================
 
 	@Test
 	public void testReverse_many() 
@@ -873,8 +933,9 @@ public class AList0Test
 		int[] ar = {10,20,30,88,41,65};
 		AList0 rr = new AList0(ar);
 		rr.reverse();
-		int[] res = {65,41,88,30,20,10};
-		assertArrayEquals(res,rr.toArray());
+		int[] exp = {65,41,88,30,20,10};
+		int[] act = rr.toArray();
+		assertArrayEquals(exp,act);
 	}
 	@Test
 	public void testReverse_2() 
@@ -882,8 +943,9 @@ public class AList0Test
 		int[] ar = {10,20};
 		AList0 rr = new AList0(ar);
 		rr.reverse();
-		int[] res = {20,10};
-		assertArrayEquals(res,rr.toArray());
+		int[] exp = {20,10};
+		int[] act = rr.toArray();
+		assertArrayEquals(exp,act);
 	}
 	@Test
 	public void testReverse_1() 
@@ -891,27 +953,34 @@ public class AList0Test
 		int[] ar = {10};
 		AList0 rr = new AList0(ar);
 		rr.reverse();
-		int[] res = {10};
-		assertArrayEquals(res,rr.toArray());
+		int[] exp = {10};
+		int[] act = rr.toArray();
+		assertArrayEquals(exp,act);
 	}
-	@Test(expected = IllegalArgumentException.class)
+	@Test
 	public void testReverse_0()
 	{
 		int[] ar = {};
 		AList0 rr = new AList0(ar);
 		rr.reverse();
+		int[] exp = {};
+		int[] act = rr.toArray();
+		assertArrayEquals(exp,act);
 	}
-	@Test(expected = IllegalArgumentException.class)
+	@Test
 	public void testReverse_null()
 	{
 		int[] ar = null;
 		AList0 rr = new AList0(ar);
 		rr.reverse();
+		int[] exp = {};
+		int[] act = rr.toArray();
+		assertArrayEquals(exp,act);
 	}
 
-	/*------------------------
-	 Test function reverseHalf
-	 -----------------------*/
+	//======================
+	//reverseHalf
+	//======================
 
 	@Test
 	public void testReverseHalf_many() 
@@ -919,8 +988,9 @@ public class AList0Test
 		int[] ar = {10,20,30,88,41,65};
 		AList0 rr = new AList0(ar);
 		rr.reverseHalf();
-		int[] res = {88,41,65,10,20,30};
-		assertArrayEquals(res,rr.toArray());
+		int[] exp = {88,41,65,10,20,30};
+		int[] act = rr.toArray();
+		assertArrayEquals(exp,act);
 	}
 	@Test
 	public void testReverseHalf_manyOdd() 
@@ -928,8 +998,9 @@ public class AList0Test
 		int[] ar = {10,20,30,88,41,65,71};
 		AList0 rr = new AList0(ar);
 		rr.reverseHalf();
-		int[] res = {41,65,71,88,10,20,30};
-		assertArrayEquals(res,rr.toArray());
+		int[] exp = {41,65,71,88,10,20,30};
+		int[] act = rr.toArray();
+		assertArrayEquals(exp,act);
 	}
 	@Test
 	public void testReverseHalf_2() 
@@ -937,8 +1008,9 @@ public class AList0Test
 		int[] ar = {10,20};
 		AList0 rr = new AList0(ar);
 		rr.reverseHalf();
-		int[] res = {20,10};
-		assertArrayEquals(res,rr.toArray());
+		int[] exp = {20,10};
+		int[] act = rr.toArray();
+		assertArrayEquals(exp,act);
 	}
 	@Test
 	public void testReverseHalf_1() 
@@ -946,27 +1018,34 @@ public class AList0Test
 		int[] ar = {10};
 		AList0 rr = new AList0(ar);
 		rr.reverseHalf();
-		int[] res = {10};
-		assertArrayEquals(res,rr.toArray());
+		int[] exp = {10};
+		int[] act = rr.toArray();
+		assertArrayEquals(exp,act);
 	}
-	@Test(expected = IllegalArgumentException.class)
+	@Test
 	public void testReverseHalf_0()
 	{
 		int[] ar = {};
 		AList0 rr = new AList0(ar);
 		rr.reverseHalf();
+		int[] exp = {};
+		int[] act = rr.toArray();
+		assertArrayEquals(exp,act);
 	}
-	@Test(expected = IllegalArgumentException.class)
+	@Test
 	public void testReverseHalf_null()
 	{
 		int[] ar = null;
 		AList0 rr = new AList0(ar);
 		rr.reverseHalf();
+		int[] exp = {};
+		int[] act = rr.toArray();
+		assertArrayEquals(exp,act);
 	}
 
-	/*-----------------------
-	 Test function sortSelect
-	 ----------------------*/
+	//======================
+	//sortSelect
+	//======================
 
 	@Test
 	public void testSortSelect_many() 
@@ -974,8 +1053,9 @@ public class AList0Test
 		int[] ar = {10,20,30,88,41,65,71};
 		AList0 rr = new AList0(ar);
 		rr.sortSelect();
-		int[] res = {10,20,30,41,65,71,88};
-		assertArrayEquals(res,rr.toArray());
+		int[] exp = {10,20,30,41,65,71,88};
+		int[] act = rr.toArray();
+		assertArrayEquals(exp,act);
 	}
 	@Test
 	public void testSortSelect_2() 
@@ -983,8 +1063,9 @@ public class AList0Test
 		int[] ar = {20,10};
 		AList0 rr = new AList0(ar);
 		rr.sortSelect();
-		int[] res = {10,20};
-		assertArrayEquals(res,rr.toArray());
+		int[] exp = {10,20};
+		int[] act = rr.toArray();
+		assertArrayEquals(exp,act);
 	}
 	@Test
 	public void testSortSelect_1() 
@@ -992,21 +1073,28 @@ public class AList0Test
 		int[] ar = {10};
 		AList0 rr = new AList0(ar);
 		rr.sortSelect();
-		int[] res = {10};
-		assertArrayEquals(res,rr.toArray());
+		int[] exp = {10};
+		int[] act = rr.toArray();
+		assertArrayEquals(exp,act);
 	}
-	@Test (expected = IllegalArgumentException.class)
+	@Test
 	public void testSortSelect_0() 
 	{
 		int[] ar = {};
 		AList0 rr = new AList0(ar);
 		rr.sortSelect();
+		int[] exp = {};
+		int[] act = rr.toArray();
+		assertArrayEquals(exp,act);
 	}
-	@Test (expected = IllegalArgumentException.class)
+	@Test
 	public void testSortSelect_null() 
 	{
 		int[] ar = null;
 		AList0 rr = new AList0(ar);
 		rr.sortSelect();
+		int[] exp = {};
+		int[] act = rr.toArray();
+		assertArrayEquals(exp,act);
 	}
 }

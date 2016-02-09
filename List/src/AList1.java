@@ -1,17 +1,18 @@
-public class AList1
+public class AList1 implements EList
 {
 	private int[] ar = new int[10];
 	private int top = 0;
 	
-	public AList1()
+	 public AList1()
 	{
 	}
 
-	public AList1(int[] ini)
+	 public AList1(int[] ini)
 	{
 		init(ini);
 	}
 	
+	@Override 
 	public void init(int[] a)
 	{
 		if (a == null)
@@ -29,17 +30,20 @@ public class AList1
 		}
 	}
 	
+	@Override 
 	public int size()
 	{
 		return top;
 	}
 	
+	@Override 
 	public void clear()
 	{
 		ar = new int[10];
 		top = 0;
 	}
 	
+	@Override
 	public int [] toArray()
 	{
 		int[] temp = new int[top];
@@ -49,6 +53,7 @@ public class AList1
 		return temp;
 	}
 	
+	@Override
 	public String toString()
 	{
 		String str = "{";
@@ -60,6 +65,7 @@ public class AList1
 		return str;
 	}
 	
+	@Override 
 	public void addStart(int val)
 	{
 		for (int i = top; i > 0; i--)
@@ -70,12 +76,14 @@ public class AList1
 		top++;
 	}
 	
+	@Override
 	public void addEnd(int val)
 	{	
 		ar[top] = val;
 		top++;
 	}
 	
+	@Override 
 	public void addPos(int pos, int val)
 	{
 		if (pos < 0 || pos > top)
@@ -89,6 +97,7 @@ public class AList1
 		top++;
 	}
 	
+	@Override 
 	public int delStart()
 	{		
 		if (top == 0)	
@@ -103,6 +112,7 @@ public class AList1
 		return delVal;
 	}
 	
+	@Override 
 	public int delEnd()
 	{
 		if (top == 0)
@@ -114,14 +124,12 @@ public class AList1
 		return delVal;
 	}
 	
+	@Override 
 	public int delPos(int pos)
 	{
-		if (top == 0)
+		if (top == 0 || pos < 0 || pos >= top)
 			throw new IllegalArgumentException();
 		
-		if (pos < 0 || pos >= top)
-			throw new ArrayIndexOutOfBoundsException();
-
 		int delVal = ar[pos];
 		for (int i = pos; i < top; i++)
 		{
@@ -131,6 +139,7 @@ public class AList1
 		return delVal;
 	}
 	
+	@Override 
 	public void set(int pos, int val)
 	{
 		if (pos < 0 || pos >= top)
@@ -139,6 +148,7 @@ public class AList1
 		ar[pos] = val;
 	}
 	
+	@Override 
 	public int get(int pos)
 	{
 		if (pos < 0 || pos >= top)
@@ -147,6 +157,7 @@ public class AList1
 		return ar[pos];
 	}
 	
+	@Override 
 	public int minElem()
 	{		
 		if (top == 0) 
@@ -164,6 +175,7 @@ public class AList1
 		return min;
 	}
 	
+	@Override 
 	public int maxElem()
 	{
 		if (top == 0) 
@@ -181,6 +193,7 @@ public class AList1
 		return max;	
 	}
 	
+	@Override 
 	public int minInd()
 	{
 		if (top == 0) 
@@ -198,6 +211,7 @@ public class AList1
 		return ind;
 	}
 	
+	@Override 
 	public int maxInd()
 	{
 		if (top == 0) 
@@ -215,6 +229,7 @@ public class AList1
 		return ind;
 	}
 	
+	@Override 
 	public void reverse()
 	{	
 		for (int i=0; i<top/2; i++)
@@ -226,6 +241,7 @@ public class AList1
 		}
 	}
 	
+	@Override 
 	public  void reverseHalf()
 	{
 		int d = (top%2 == 0) ? 0 : 1;
@@ -238,7 +254,8 @@ public class AList1
 		}
 	}
 	
-	public void sortSelect()
+	@Override 
+	public void sort()
 	{
 		for (int i=0;i<top-1;i++)
 		{

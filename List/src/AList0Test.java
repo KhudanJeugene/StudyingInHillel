@@ -483,14 +483,14 @@ public class AList0Test
 		int[] act = rr.toArray();
 		assertArrayEquals(exp,act);
 	}
-	@Test (expected = NegativeArraySizeException.class)
+	@Test (expected = IllegalArgumentException.class)
 	public void testDelStart_0() 
 	{
 		int[] ar = {};
 		AList0 rr = new AList0(ar);
 		rr.delStart();
 	}
-	@Test (expected = NegativeArraySizeException.class)
+	@Test (expected = IllegalArgumentException.class)
 	public void testDelStart_null()
 	{
 		int[] ar = null;
@@ -541,14 +541,14 @@ public class AList0Test
 		int[] act = rr.toArray();
 		assertArrayEquals(exp,act);
 	}
-	@Test (expected = NegativeArraySizeException.class)
+	@Test (expected = IllegalArgumentException.class)
 	public void testDelEnd_0() 
 	{
 		int[] ar = {};
 		AList0 rr = new AList0(ar);
 		rr.delEnd();
 	}
-	@Test (expected = NegativeArraySizeException.class)
+	@Test (expected = IllegalArgumentException.class)
 	public void testDelEnd_null()
 	{
 		int[] ar = null;
@@ -611,7 +611,7 @@ public class AList0Test
 		int[] act = rr.toArray();
 		assertArrayEquals(exp,act);
 	}
-	@Test (expected = NegativeArraySizeException.class)
+	@Test (expected = IllegalArgumentException.class)
 	public void testDelPos_0() 
 	{
 		int[] ar = {};
@@ -619,7 +619,7 @@ public class AList0Test
 		int pos = 0;
 		rr.delPos(pos);
 	}
-	@Test (expected = NegativeArraySizeException.class)
+	@Test (expected = IllegalArgumentException.class)
 	public void testDelPos_null() 
 	{
 		int[] ar = null;
@@ -1052,27 +1052,27 @@ public class AList0Test
 	{
 		int[] ar = {10,20,30,88,41,65,71};
 		AList0 rr = new AList0(ar);
-		rr.sortSelect();
+		rr.sort();
 		int[] exp = {10,20,30,41,65,71,88};
 		int[] act = rr.toArray();
 		assertArrayEquals(exp,act);
 	}
 	@Test
-	public void testSortSelect_2() 
+	public void testSort_2() 
 	{
 		int[] ar = {20,10};
 		AList0 rr = new AList0(ar);
-		rr.sortSelect();
+		rr.sort();
 		int[] exp = {10,20};
 		int[] act = rr.toArray();
 		assertArrayEquals(exp,act);
 	}
 	@Test
-	public void testSortSelect_1() 
+	public void testSort_1() 
 	{
 		int[] ar = {10};
 		AList0 rr = new AList0(ar);
-		rr.sortSelect();
+		rr.sort();
 		int[] exp = {10};
 		int[] act = rr.toArray();
 		assertArrayEquals(exp,act);
@@ -1082,17 +1082,17 @@ public class AList0Test
 	{
 		int[] ar = {};
 		AList0 rr = new AList0(ar);
-		rr.sortSelect();
+		rr.sort();
 		int[] exp = {};
 		int[] act = rr.toArray();
 		assertArrayEquals(exp,act);
 	}
 	@Test
-	public void testSortSelect_null() 
+	public void testSort_null() 
 	{
 		int[] ar = null;
 		AList0 rr = new AList0(ar);
-		rr.sortSelect();
+		rr.sort();
 		int[] exp = {};
 		int[] act = rr.toArray();
 		assertArrayEquals(exp,act);

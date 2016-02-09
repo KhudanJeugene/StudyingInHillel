@@ -1,4 +1,4 @@
-public class AList0
+public class AList0 implements EList
 {
 	private int[] ar = {};
 	public AList0()
@@ -9,7 +9,8 @@ public class AList0
 	{
 		init(ini);
 	}
-
+	
+	@Override
 	public void init(int[] a)
 	{
 		if (a == null)
@@ -24,17 +25,20 @@ public class AList0
 		}
 		ar = temp;
 	}
-
+	
+	@Override
 	public int size()
 	{
 		return ar.length;
 	}
-
+	
+	@Override
 	public void clear()
 	{
 		ar = new int[0];
 	}
-
+	
+	@Override
 	public int [] toArray()
 	{
 		int[] temp = new int[ar.length];
@@ -43,7 +47,8 @@ public class AList0
 
 		return temp;
 	}
-
+	
+	@Override
 	public String toString()
 	{
 		String str = "{";
@@ -54,7 +59,8 @@ public class AList0
 		str += "}";
 		return str;
 	}
-
+	
+	@Override
 	public void addStart(int val)
 	{
 		int[] temp = new int[ar.length + 1];
@@ -65,7 +71,8 @@ public class AList0
 		temp[0] = val;
 		ar = temp;
 	}
-
+	
+	@Override
 	public void addEnd(int val)
 	{
 		int[] temp = new int[ar.length + 1];
@@ -76,9 +83,13 @@ public class AList0
 		temp[temp.length - 1] = val;
 		ar = temp;
 	}
-
+	
+	@Override
 	public void addPos(int pos, int val)
 	{
+		if (pos < 0 || pos > ar.length)
+			throw new ArrayIndexOutOfBoundsException();
+		
 		int[] temp = new int[ar.length + 1];
 		for (int i = 0; i < pos; i++)
 		{
@@ -91,11 +102,12 @@ public class AList0
 		}
 		ar = temp;
 	}
-
+	
+	@Override
 	public int delStart()
 	{
 		if (ar.length == 0)
-			throw new NegativeArraySizeException();
+			throw new IllegalArgumentException();
 		
 		int delVal = ar[0];
 		int[] temp = new int[ar.length - 1];
@@ -107,11 +119,12 @@ public class AList0
 
 		return delVal;
 	}
-
+	
+	@Override
 	public int delEnd()
 	{
 		if (ar.length == 0)
-			throw new NegativeArraySizeException();
+			throw new IllegalArgumentException();
 
 		int delVal = ar[ar.length-1];
 		int[] temp = new int[ar.length - 1];
@@ -123,11 +136,12 @@ public class AList0
 
 		return delVal;
 	}
-
+	
+	@Override
 	public int delPos(int pos)
 	{
-		if (ar.length == 0)
-			throw new NegativeArraySizeException();
+		if (ar.length == 0 || pos < 0 || pos >= ar.length)
+			throw new IllegalArgumentException();
 
 		int delVal = ar[pos];
 		int[] temp = new int[ar.length - 1];
@@ -138,17 +152,20 @@ public class AList0
 		ar = temp;
 		return delVal;
 	}
-
+	
+	@Override
 	public void set(int pos, int val)
 	{
 		ar[pos] = val;
 	}
 	
+	@Override
 	public int get(int pos)
 	{
 		return ar[pos];
 	}
-
+	
+	@Override
 	public int minElem()
 	{		
 		if (ar.length == 0) 
@@ -165,7 +182,8 @@ public class AList0
 		}
 		return min;
 	}
-
+	
+	@Override
 	public int maxElem()
 	{
 		if (ar.length == 0) 
@@ -182,7 +200,8 @@ public class AList0
 		}
 		return max;	
 	}
-
+	
+	@Override
 	public int minInd()
 	{
 		if (ar.length == 0) 
@@ -199,7 +218,8 @@ public class AList0
 		}
 		return ind;
 	}
-
+	
+	@Override
 	public int maxInd()
 	{
 		if (ar.length == 0) 
@@ -216,7 +236,8 @@ public class AList0
 		}
 		return ind;
 	}
-
+	
+	@Override
 	public void reverse()
 	{	
 		for (int i=0; i<ar.length/2; i++)
@@ -227,7 +248,8 @@ public class AList0
 			ar[ar.length-i-1] = temp;
 		}
 	}
-
+	
+	@Override
 	public  void reverseHalf()
 	{
 		int d = (ar.length%2 == 0) ? 0 : 1;
@@ -240,7 +262,8 @@ public class AList0
 		}
 	}
 	
-	public void sortSelect()
+	@Override
+	public void sort()
 	{
 		for (int i=0;i<ar.length-1;i++)
 		{
