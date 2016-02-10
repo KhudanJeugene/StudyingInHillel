@@ -115,3 +115,753 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.wst.xml.core 4 4 2016-02-09 18:47:20.370
+!MESSAGE IStructuredDocumentRegion management failed.
+!STACK 0
+org.eclipse.wst.xml.core.internal.document.StructuredDocumentRegionManagementException: IStructuredDocumentRegion management failed.
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.removeStructuredDocumentRegion(XMLModelParser.java:2265)
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.removeStructuredDocumentRegion(XMLModelParser.java:2288)
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.removeStructuredDocumentRegion(XMLModelParser.java:2288)
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.changeStructuredDocumentRegion(XMLModelParser.java:546)
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.changeData(XMLModelParser.java:236)
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.changeRegion(XMLModelParser.java:319)
+	at org.eclipse.wst.xml.core.internal.document.DOMModelImpl.regionChanged(DOMModelImpl.java:791)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument._fireEvent(BasicStructuredDocument.java:542)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.fireStructuredDocumentEvent(BasicStructuredDocument.java:1180)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.internalReplaceText(BasicStructuredDocument.java:1964)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replaceText(BasicStructuredDocument.java:2423)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replaceText(BasicStructuredDocument.java:2408)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.access$2(JobSafeStructuredDocument.java:1)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument$3.run(JobSafeStructuredDocument.java:141)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.sse.ui.EditorExecutionContext.execute(EditorExecutionContext.java:149)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.replaceText(JobSafeStructuredDocument.java:144)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replace(BasicStructuredDocument.java:2368)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.access$0(JobSafeStructuredDocument.java:1)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument$1.run(JobSafeStructuredDocument.java:103)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.sse.ui.EditorExecutionContext.execute(EditorExecutionContext.java:149)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.replace(JobSafeStructuredDocument.java:106)
+	at org.eclipse.jface.text.projection.ProjectionTextStore.replace(ProjectionTextStore.java:111)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1184)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1210)
+	at org.eclipse.jface.text.projection.ProjectionDocument.replace(ProjectionDocument.java:629)
+	at org.eclipse.jface.text.DefaultDocumentAdapter.replaceTextRange(DefaultDocumentAdapter.java:248)
+	at org.eclipse.swt.custom.StyledText.modifyContent(StyledText.java:7305)
+	at org.eclipse.swt.custom.StyledText.sendKeyEvent(StyledText.java:8156)
+	at org.eclipse.swt.custom.StyledText.doContent(StyledText.java:2502)
+	at org.eclipse.swt.custom.StyledText.handleKey(StyledText.java:5964)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5995)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5682)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1113)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1137)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1122)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1164)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1160)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1581)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4795)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:343)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4676)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5050)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.wst.server.core 4 0 2016-02-09 19:02:19.087
+!MESSAGE Could not delete E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html. May be locked by another process.
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2016-02-09 19:02:19.087
+!MESSAGE Error copying file E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html: E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html (The requested operation cannot be performed on a file with a user-mapped section open)
+!STACK 0
+java.io.FileNotFoundException: E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html (The requested operation cannot be performed on a file with a user-mapped section open)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:794)
+	at org.eclipse.wst.server.core.util.PublishHelper.moveTempFile(PublishHelper.java:761)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:93)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:496)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishSmart(PublishHelper.java:343)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishSmart(PublishHelper.java:188)
+	at org.eclipse.wst.server.core.util.PublishUtil.publishSmart(PublishUtil.java:58)
+	at org.eclipse.jst.server.preview.adapter.internal.core.PreviewServerBehaviour.publishModule(PreviewServerBehaviour.java:192)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModule(ServerBehaviourDelegate.java:1091)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModules(ServerBehaviourDelegate.java:1183)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:987)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.wst.server.core 4 0 2016-02-09 19:02:26.552
+!MESSAGE Could not delete E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html. May be locked by another process.
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2016-02-09 19:02:26.552
+!MESSAGE Error copying file E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html: E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html (The requested operation cannot be performed on a file with a user-mapped section open)
+!STACK 0
+java.io.FileNotFoundException: E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html (The requested operation cannot be performed on a file with a user-mapped section open)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:794)
+	at org.eclipse.wst.server.core.util.PublishHelper.moveTempFile(PublishHelper.java:761)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:93)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:496)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishSmart(PublishHelper.java:343)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishSmart(PublishHelper.java:188)
+	at org.eclipse.wst.server.core.util.PublishUtil.publishSmart(PublishUtil.java:58)
+	at org.eclipse.jst.server.preview.adapter.internal.core.PreviewServerBehaviour.publishModule(PreviewServerBehaviour.java:192)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModule(ServerBehaviourDelegate.java:1091)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModules(ServerBehaviourDelegate.java:1183)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:987)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.wst.server.core 4 0 2016-02-09 19:02:38.051
+!MESSAGE Could not delete E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html. May be locked by another process.
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2016-02-09 19:02:38.051
+!MESSAGE Error copying file E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html: E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html (The requested operation cannot be performed on a file with a user-mapped section open)
+!STACK 0
+java.io.FileNotFoundException: E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html (The requested operation cannot be performed on a file with a user-mapped section open)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:794)
+	at org.eclipse.wst.server.core.util.PublishHelper.moveTempFile(PublishHelper.java:761)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:93)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:496)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishSmart(PublishHelper.java:343)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishSmart(PublishHelper.java:188)
+	at org.eclipse.wst.server.core.util.PublishUtil.publishSmart(PublishUtil.java:58)
+	at org.eclipse.jst.server.preview.adapter.internal.core.PreviewServerBehaviour.publishModule(PreviewServerBehaviour.java:192)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModule(ServerBehaviourDelegate.java:1091)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModules(ServerBehaviourDelegate.java:1183)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:987)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.wst.server.core 4 0 2016-02-09 19:02:49.993
+!MESSAGE Could not delete E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html. May be locked by another process.
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2016-02-09 19:02:49.993
+!MESSAGE Error copying file E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html: E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html (The requested operation cannot be performed on a file with a user-mapped section open)
+!STACK 0
+java.io.FileNotFoundException: E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html (The requested operation cannot be performed on a file with a user-mapped section open)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:794)
+	at org.eclipse.wst.server.core.util.PublishHelper.moveTempFile(PublishHelper.java:761)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:93)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:496)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishSmart(PublishHelper.java:343)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishSmart(PublishHelper.java:188)
+	at org.eclipse.wst.server.core.util.PublishUtil.publishSmart(PublishUtil.java:58)
+	at org.eclipse.jst.server.preview.adapter.internal.core.PreviewServerBehaviour.publishModule(PreviewServerBehaviour.java:192)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModule(ServerBehaviourDelegate.java:1091)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModules(ServerBehaviourDelegate.java:1183)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:987)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.wst.server.core 4 0 2016-02-09 19:03:54.842
+!MESSAGE Could not delete E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html. May be locked by another process.
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2016-02-09 19:03:54.842
+!MESSAGE Error copying file E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html: E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html (The requested operation cannot be performed on a file with a user-mapped section open)
+!STACK 0
+java.io.FileNotFoundException: E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html (The requested operation cannot be performed on a file with a user-mapped section open)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:794)
+	at org.eclipse.wst.server.core.util.PublishHelper.moveTempFile(PublishHelper.java:761)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:93)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:496)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishSmart(PublishHelper.java:343)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishSmart(PublishHelper.java:188)
+	at org.eclipse.wst.server.core.util.PublishUtil.publishSmart(PublishUtil.java:58)
+	at org.eclipse.jst.server.preview.adapter.internal.core.PreviewServerBehaviour.publishModule(PreviewServerBehaviour.java:192)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModule(ServerBehaviourDelegate.java:1091)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModules(ServerBehaviourDelegate.java:1183)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:987)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2016-02-09 19:05:26.133 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_66
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=uk_UA
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-02-09 19:05:44.579
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Женя'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.wst.server.core 4 0 2016-02-09 19:07:06.111
+!MESSAGE Could not delete E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html. May be locked by another process.
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2016-02-09 19:07:06.111
+!MESSAGE Error copying file E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html: E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html (The requested operation cannot be performed on a file with a user-mapped section open)
+!STACK 0
+java.io.FileNotFoundException: E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html (The requested operation cannot be performed on a file with a user-mapped section open)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:794)
+	at org.eclipse.wst.server.core.util.PublishHelper.moveTempFile(PublishHelper.java:761)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:93)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:496)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishSmart(PublishHelper.java:343)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishSmart(PublishHelper.java:188)
+	at org.eclipse.wst.server.core.util.PublishUtil.publishSmart(PublishUtil.java:58)
+	at org.eclipse.jst.server.preview.adapter.internal.core.PreviewServerBehaviour.publishModule(PreviewServerBehaviour.java:192)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModule(ServerBehaviourDelegate.java:1091)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModules(ServerBehaviourDelegate.java:1183)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:987)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.jface.text 4 0 2016-02-09 19:07:44.724
+!MESSAGE Unexpected runtime error while computing a text hover
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocumentRegion.getStartOffset(BasicStructuredDocumentRegion.java:277)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocumentRegion.getText(BasicStructuredDocumentRegion.java:304)
+	at org.eclipse.wst.xml.ui.internal.taginfo.XMLTagInfoHoverProcessor.computeTagAttValueHelp(XMLTagInfoHoverProcessor.java:134)
+	at org.eclipse.wst.xml.ui.internal.taginfo.XMLTagInfoHoverProcessor.computeRegionHelp(XMLTagInfoHoverProcessor.java:111)
+	at org.eclipse.wst.xml.ui.internal.taginfo.XMLTagInfoHoverProcessor.computeHoverHelp(XMLTagInfoHoverProcessor.java:86)
+	at org.eclipse.wst.xml.ui.internal.taginfo.XMLTagInfoHoverProcessor.getHoverInfo(XMLTagInfoHoverProcessor.java:257)
+	at org.eclipse.jst.jsf.facelet.ui.internal.hover.FaceletHover.getHoverInfo(FaceletHover.java:58)
+	at org.eclipse.wst.sse.ui.internal.taginfo.BestMatchHover.getHoverInfo2(BestMatchHover.java:142)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+
+!ENTRY org.eclipse.jface.text 4 0 2016-02-09 19:07:50.338
+!MESSAGE Unexpected runtime error while computing a text hover
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocumentRegion.getStartOffset(BasicStructuredDocumentRegion.java:277)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocumentRegion.getText(BasicStructuredDocumentRegion.java:304)
+	at org.eclipse.wst.xml.ui.internal.taginfo.XMLTagInfoHoverProcessor.computeTagAttValueHelp(XMLTagInfoHoverProcessor.java:134)
+	at org.eclipse.wst.xml.ui.internal.taginfo.XMLTagInfoHoverProcessor.computeRegionHelp(XMLTagInfoHoverProcessor.java:111)
+	at org.eclipse.wst.xml.ui.internal.taginfo.XMLTagInfoHoverProcessor.computeHoverHelp(XMLTagInfoHoverProcessor.java:86)
+	at org.eclipse.wst.xml.ui.internal.taginfo.XMLTagInfoHoverProcessor.getHoverInfo(XMLTagInfoHoverProcessor.java:257)
+	at org.eclipse.jst.jsf.facelet.ui.internal.hover.FaceletHover.getHoverInfo(FaceletHover.java:58)
+	at org.eclipse.wst.sse.ui.internal.taginfo.BestMatchHover.getHoverInfo2(BestMatchHover.java:142)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+
+!ENTRY org.eclipse.wst.xml.core 4 4 2016-02-09 19:08:02.420
+!MESSAGE IStructuredDocumentRegion management failed.
+!STACK 0
+org.eclipse.wst.xml.core.internal.document.StructuredDocumentRegionManagementException: IStructuredDocumentRegion management failed.
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.removeStructuredDocumentRegion(XMLModelParser.java:2265)
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.removeStructuredDocumentRegion(XMLModelParser.java:2288)
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.removeStructuredDocumentRegion(XMLModelParser.java:2288)
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.removeStructuredDocumentRegion(XMLModelParser.java:2288)
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.changeStructuredDocumentRegion(XMLModelParser.java:546)
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.changeTagName(XMLModelParser.java:578)
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.changeRegion(XMLModelParser.java:347)
+	at org.eclipse.wst.xml.core.internal.document.DOMModelImpl.regionChanged(DOMModelImpl.java:791)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument._fireEvent(BasicStructuredDocument.java:542)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.fireStructuredDocumentEvent(BasicStructuredDocument.java:1180)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.internalReplaceText(BasicStructuredDocument.java:1964)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replaceText(BasicStructuredDocument.java:2423)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replaceText(BasicStructuredDocument.java:2408)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.access$2(JobSafeStructuredDocument.java:1)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument$3.run(JobSafeStructuredDocument.java:141)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.sse.ui.EditorExecutionContext.execute(EditorExecutionContext.java:149)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.replaceText(JobSafeStructuredDocument.java:144)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replace(BasicStructuredDocument.java:2368)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.access$0(JobSafeStructuredDocument.java:1)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument$1.run(JobSafeStructuredDocument.java:103)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.sse.ui.EditorExecutionContext.execute(EditorExecutionContext.java:149)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.replace(JobSafeStructuredDocument.java:106)
+	at org.eclipse.jface.text.projection.ProjectionTextStore.replace(ProjectionTextStore.java:111)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1184)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1210)
+	at org.eclipse.jface.text.projection.ProjectionDocument.replace(ProjectionDocument.java:629)
+	at org.eclipse.jface.text.DefaultDocumentAdapter.replaceTextRange(DefaultDocumentAdapter.java:248)
+	at org.eclipse.swt.custom.StyledText.modifyContent(StyledText.java:7305)
+	at org.eclipse.swt.custom.StyledText.sendKeyEvent(StyledText.java:8156)
+	at org.eclipse.swt.custom.StyledText.doContent(StyledText.java:2502)
+	at org.eclipse.swt.custom.StyledText.handleKey(StyledText.java:5964)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5995)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5682)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1113)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1137)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1122)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1164)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1160)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1581)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4795)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:343)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4676)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5050)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.wst.server.core 4 0 2016-02-09 19:08:10.173
+!MESSAGE Could not delete E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html. May be locked by another process.
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2016-02-09 19:08:10.173
+!MESSAGE Error copying file E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html: E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html (The requested operation cannot be performed on a file with a user-mapped section open)
+!STACK 0
+java.io.FileNotFoundException: E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html (The requested operation cannot be performed on a file with a user-mapped section open)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:794)
+	at org.eclipse.wst.server.core.util.PublishHelper.moveTempFile(PublishHelper.java:761)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:93)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:496)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishSmart(PublishHelper.java:343)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishSmart(PublishHelper.java:188)
+	at org.eclipse.wst.server.core.util.PublishUtil.publishSmart(PublishUtil.java:58)
+	at org.eclipse.jst.server.preview.adapter.internal.core.PreviewServerBehaviour.publishModule(PreviewServerBehaviour.java:192)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModule(ServerBehaviourDelegate.java:1091)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModules(ServerBehaviourDelegate.java:1183)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:987)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.wst.server.core 4 0 2016-02-09 19:09:02.588
+!MESSAGE Could not delete E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html. May be locked by another process.
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2016-02-09 19:09:02.588
+!MESSAGE Error copying file E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html: E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html (The requested operation cannot be performed on a file with a user-mapped section open)
+!STACK 0
+java.io.FileNotFoundException: E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html (The requested operation cannot be performed on a file with a user-mapped section open)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:794)
+	at org.eclipse.wst.server.core.util.PublishHelper.moveTempFile(PublishHelper.java:761)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:93)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:496)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishSmart(PublishHelper.java:343)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishSmart(PublishHelper.java:188)
+	at org.eclipse.wst.server.core.util.PublishUtil.publishSmart(PublishUtil.java:58)
+	at org.eclipse.jst.server.preview.adapter.internal.core.PreviewServerBehaviour.publishModule(PreviewServerBehaviour.java:192)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModule(ServerBehaviourDelegate.java:1091)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModules(ServerBehaviourDelegate.java:1183)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:987)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.wst.server.core 4 0 2016-02-09 19:09:27.705
+!MESSAGE Could not delete E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html. May be locked by another process.
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2016-02-09 19:09:27.705
+!MESSAGE Error copying file E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html: E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html (The requested operation cannot be performed on a file with a user-mapped section open)
+!STACK 0
+java.io.FileNotFoundException: E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html (The requested operation cannot be performed on a file with a user-mapped section open)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:794)
+	at org.eclipse.wst.server.core.util.PublishHelper.moveTempFile(PublishHelper.java:761)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:93)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:496)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishSmart(PublishHelper.java:343)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishSmart(PublishHelper.java:188)
+	at org.eclipse.wst.server.core.util.PublishUtil.publishSmart(PublishUtil.java:58)
+	at org.eclipse.jst.server.preview.adapter.internal.core.PreviewServerBehaviour.publishModule(PreviewServerBehaviour.java:192)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModule(ServerBehaviourDelegate.java:1091)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModules(ServerBehaviourDelegate.java:1183)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:987)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2016-02-09 19:15:11.346 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_66
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=uk_UA
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-02-09 19:15:31.891
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Женя'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.wst.server.core 4 0 2016-02-09 19:17:43.036
+!MESSAGE Could not delete E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html. May be locked by another process.
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2016-02-09 19:17:43.036
+!MESSAGE Error copying file E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html: E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html (The requested operation cannot be performed on a file with a user-mapped section open)
+!STACK 0
+java.io.FileNotFoundException: E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html (The requested operation cannot be performed on a file with a user-mapped section open)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:794)
+	at org.eclipse.wst.server.core.util.PublishHelper.moveTempFile(PublishHelper.java:761)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:93)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:496)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishSmart(PublishHelper.java:343)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishSmart(PublishHelper.java:188)
+	at org.eclipse.wst.server.core.util.PublishUtil.publishSmart(PublishUtil.java:58)
+	at org.eclipse.jst.server.preview.adapter.internal.core.PreviewServerBehaviour.publishModule(PreviewServerBehaviour.java:192)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModule(ServerBehaviourDelegate.java:1091)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModules(ServerBehaviourDelegate.java:1183)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:987)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.wst.server.core 4 0 2016-02-09 19:17:48.437
+!MESSAGE Could not delete E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html. May be locked by another process.
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2016-02-09 19:17:48.437
+!MESSAGE Error copying file E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html: E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html (The requested operation cannot be performed on a file with a user-mapped section open)
+!STACK 0
+java.io.FileNotFoundException: E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html (The requested operation cannot be performed on a file with a user-mapped section open)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:794)
+	at org.eclipse.wst.server.core.util.PublishHelper.moveTempFile(PublishHelper.java:761)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:93)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:496)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishSmart(PublishHelper.java:343)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishSmart(PublishHelper.java:188)
+	at org.eclipse.wst.server.core.util.PublishUtil.publishSmart(PublishUtil.java:58)
+	at org.eclipse.jst.server.preview.adapter.internal.core.PreviewServerBehaviour.publishModule(PreviewServerBehaviour.java:192)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModule(ServerBehaviourDelegate.java:1091)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModules(ServerBehaviourDelegate.java:1183)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:987)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.wst.server.core 4 0 2016-02-09 19:19:16.046
+!MESSAGE Could not delete E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\JsProject\Calc3.html. May be locked by another process.
+!SESSION 2016-02-09 19:21:51.303 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_66
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=uk_UA
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-02-09 19:22:13.688
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Женя'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.wst.server.core 4 0 2016-02-09 19:24:20.704
+!MESSAGE Could not delete E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\Calculator\Calculator3.html. May be locked by another process.
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2016-02-09 19:24:20.704
+!MESSAGE Error copying file E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\Calculator\Calculator3.html: E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\Calculator\Calculator3.html (The requested operation cannot be performed on a file with a user-mapped section open)
+!STACK 0
+java.io.FileNotFoundException: E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\Calculator\Calculator3.html (The requested operation cannot be performed on a file with a user-mapped section open)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:794)
+	at org.eclipse.wst.server.core.util.PublishHelper.moveTempFile(PublishHelper.java:761)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:93)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:496)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishSmart(PublishHelper.java:343)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishSmart(PublishHelper.java:188)
+	at org.eclipse.wst.server.core.util.PublishUtil.publishSmart(PublishUtil.java:58)
+	at org.eclipse.jst.server.preview.adapter.internal.core.PreviewServerBehaviour.publishModule(PreviewServerBehaviour.java:192)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModule(ServerBehaviourDelegate.java:1091)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModules(ServerBehaviourDelegate.java:1183)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:987)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.wst.server.core 4 0 2016-02-09 19:24:46.612
+!MESSAGE Could not delete E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\Calculator\Calculator3.html. May be locked by another process.
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2016-02-09 19:24:46.612
+!MESSAGE Error copying file E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\Calculator\Calculator3.html: E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\Calculator\Calculator3.html (The requested operation cannot be performed on a file with a user-mapped section open)
+!STACK 0
+java.io.FileNotFoundException: E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\Calculator\Calculator3.html (The requested operation cannot be performed on a file with a user-mapped section open)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:794)
+	at org.eclipse.wst.server.core.util.PublishHelper.moveTempFile(PublishHelper.java:761)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:93)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:496)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishSmart(PublishHelper.java:343)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishSmart(PublishHelper.java:188)
+	at org.eclipse.wst.server.core.util.PublishUtil.publishSmart(PublishUtil.java:58)
+	at org.eclipse.jst.server.preview.adapter.internal.core.PreviewServerBehaviour.publishModule(PreviewServerBehaviour.java:192)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModule(ServerBehaviourDelegate.java:1091)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModules(ServerBehaviourDelegate.java:1183)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:987)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.wst.server.core 4 0 2016-02-09 19:24:59.463
+!MESSAGE Could not delete E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\Calculator\Calculator3.html. May be locked by another process.
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2016-02-09 19:24:59.463
+!MESSAGE Error copying file E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\Calculator\Calculator3.html: E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\Calculator\Calculator3.html (The requested operation cannot be performed on a file with a user-mapped section open)
+!STACK 0
+java.io.FileNotFoundException: E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\Calculator\Calculator3.html (The requested operation cannot be performed on a file with a user-mapped section open)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:794)
+	at org.eclipse.wst.server.core.util.PublishHelper.moveTempFile(PublishHelper.java:761)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:93)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:496)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishSmart(PublishHelper.java:343)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishSmart(PublishHelper.java:188)
+	at org.eclipse.wst.server.core.util.PublishUtil.publishSmart(PublishUtil.java:58)
+	at org.eclipse.jst.server.preview.adapter.internal.core.PreviewServerBehaviour.publishModule(PreviewServerBehaviour.java:192)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModule(ServerBehaviourDelegate.java:1091)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModules(ServerBehaviourDelegate.java:1183)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:987)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.wst.server.core 4 0 2016-02-09 19:25:25.467
+!MESSAGE Could not delete E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\Calculator\Calculator3.html. May be locked by another process.
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2016-02-09 19:25:25.467
+!MESSAGE Error copying file E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\Calculator\Calculator3.html: E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\Calculator\Calculator3.html (The requested operation cannot be performed on a file with a user-mapped section open)
+!STACK 0
+java.io.FileNotFoundException: E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\Calculator\Calculator3.html (The requested operation cannot be performed on a file with a user-mapped section open)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:794)
+	at org.eclipse.wst.server.core.util.PublishHelper.moveTempFile(PublishHelper.java:761)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:93)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:496)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishSmart(PublishHelper.java:343)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishSmart(PublishHelper.java:188)
+	at org.eclipse.wst.server.core.util.PublishUtil.publishSmart(PublishUtil.java:58)
+	at org.eclipse.jst.server.preview.adapter.internal.core.PreviewServerBehaviour.publishModule(PreviewServerBehaviour.java:192)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModule(ServerBehaviourDelegate.java:1091)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModules(ServerBehaviourDelegate.java:1183)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:987)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.wst.server.core 4 0 2016-02-09 19:25:35.515
+!MESSAGE Could not delete E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\Calculator\Calculator3.html. May be locked by another process.
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2016-02-09 19:25:35.515
+!MESSAGE Error copying file E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\Calculator\Calculator3.html: E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\Calculator\Calculator3.html (The requested operation cannot be performed on a file with a user-mapped section open)
+!STACK 0
+java.io.FileNotFoundException: E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\Calculator\Calculator3.html (The requested operation cannot be performed on a file with a user-mapped section open)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:794)
+	at org.eclipse.wst.server.core.util.PublishHelper.moveTempFile(PublishHelper.java:761)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:93)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:496)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishSmart(PublishHelper.java:343)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishSmart(PublishHelper.java:188)
+	at org.eclipse.wst.server.core.util.PublishUtil.publishSmart(PublishUtil.java:58)
+	at org.eclipse.jst.server.preview.adapter.internal.core.PreviewServerBehaviour.publishModule(PreviewServerBehaviour.java:192)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModule(ServerBehaviourDelegate.java:1091)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModules(ServerBehaviourDelegate.java:1183)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:987)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2016-02-09 19:25:47.849 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_66
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=uk_UA
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-02-09 19:26:07.464
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Женя'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.wst.server.core 4 0 2016-02-09 19:28:16.162
+!MESSAGE Could not delete E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\Calculator\Calculator3.html. May be locked by another process.
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2016-02-09 19:28:16.163
+!MESSAGE Error copying file E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\Calculator\Calculator3.html: E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\Calculator\Calculator3.html (The requested operation cannot be performed on a file with a user-mapped section open)
+!STACK 0
+java.io.FileNotFoundException: E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\Calculator\Calculator3.html (The requested operation cannot be performed on a file with a user-mapped section open)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:794)
+	at org.eclipse.wst.server.core.util.PublishHelper.moveTempFile(PublishHelper.java:761)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:93)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:496)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishSmart(PublishHelper.java:343)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishSmart(PublishHelper.java:188)
+	at org.eclipse.wst.server.core.util.PublishUtil.publishSmart(PublishUtil.java:58)
+	at org.eclipse.jst.server.preview.adapter.internal.core.PreviewServerBehaviour.publishModule(PreviewServerBehaviour.java:192)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModule(ServerBehaviourDelegate.java:1091)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModules(ServerBehaviourDelegate.java:1183)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:987)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.wst.server.core 4 0 2016-02-09 19:28:42.820
+!MESSAGE Could not delete E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\Calculator\Calculator3.html. May be locked by another process.
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2016-02-09 19:28:42.820
+!MESSAGE Error copying file E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\Calculator\Calculator3.html: E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\Calculator\Calculator3.html (The requested operation cannot be performed on a file with a user-mapped section open)
+!STACK 0
+java.io.FileNotFoundException: E:\Workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\Calculator\Calculator3.html (The requested operation cannot be performed on a file with a user-mapped section open)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:794)
+	at org.eclipse.wst.server.core.util.PublishHelper.moveTempFile(PublishHelper.java:761)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:93)
+	at org.eclipse.wst.server.core.util.PublishHelper.copyFile(PublishHelper.java:496)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishSmart(PublishHelper.java:343)
+	at org.eclipse.wst.server.core.util.PublishHelper.publishSmart(PublishHelper.java:188)
+	at org.eclipse.wst.server.core.util.PublishUtil.publishSmart(PublishUtil.java:58)
+	at org.eclipse.jst.server.preview.adapter.internal.core.PreviewServerBehaviour.publishModule(PreviewServerBehaviour.java:192)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModule(ServerBehaviourDelegate.java:1091)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModules(ServerBehaviourDelegate.java:1183)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:987)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2016-02-09 19:40:44.325 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_66
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=uk_UA
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-02-09 19:41:04.922
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Женя'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2016-02-10 17:15:13.753 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_66
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=uk_UA
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-02-10 17:16:13.225
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Женя'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2016-02-10 17:23:09.864 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_66
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=uk_UA
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-02-10 17:24:06.329
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Женя'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
