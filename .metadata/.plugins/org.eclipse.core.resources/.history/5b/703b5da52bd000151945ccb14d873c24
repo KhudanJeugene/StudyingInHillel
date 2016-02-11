@@ -1,7 +1,0 @@
-public class TestCalculator
-{
-	public void testCall_1()
-	{
-		open("file:///E:/Workspace2/SimpleCalculator/src/main/resources/Calculator.html");
-	}
-}
