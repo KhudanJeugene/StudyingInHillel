@@ -1,0 +1,15 @@
+import org.openqa.selenium.WebDriver;
+org.openqa.selenium.firefox.FirefoxDriver;
+public class TestCalculator
+{
+	static WebDriver driver = new FirefoxDriver();
+	
+	@Test
+	public void testCall_1()
+	{
+		
+		open("file:///E:/Workspace2/SimpleCalculator/src/main/resources/Calculator.html");
+	
+	
+	}
+}

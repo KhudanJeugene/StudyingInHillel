@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <servers>
-  <server hostname="localhost" id="J2EE Preview at localhost" name="J2EE Preview at localhost" runtime-id="J2EE Preview" server-type="org.eclipse.jst.server.preview.server" server-type-id="org.eclipse.jst.server.preview.server" start-timeout="240" stop-timeout="240" timestamp="7">
-    <list key="modules" value0="Calculator::org.eclipse.wst.web.internal.deployables.static:Calculator::wst.web::1.0"/>
-  </server>
+  <server hostname="localhost" id="HTTP Server at localhost" isPublishing="true" name="HTTP Server at localhost" port="8081" runtime-id="HTTP Server" server-type="org.eclipse.wst.server.http.server" server-type-id="org.eclipse.wst.server.http.server" start-timeout="240" stop-timeout="240" timestamp="2" urlPrefix=""/>
 </servers>

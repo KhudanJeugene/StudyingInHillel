@@ -1,0 +1,4 @@
+public class TestCalculator
+{
+	open("file:///E:/Workspace2/SimpleCalculator/src/main/resources/Calculator.html");
+}

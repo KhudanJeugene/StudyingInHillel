@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>Calculate two number</title>
+		<script>
+		function calc() 
+		{
+			var a = parseInt(document.getElementById('a').value);
+			var op = document.getElementById('s').value;
+			var b = parseInt(document.getElementById('b').value);
+			var c = 0;
+			if(op == '+') c = a+b;
+			else if(op == '-') c = a-b;
+			else if(op == '*') c = a*b;
+			else if(op == '/') c = a/b;
+			document.getElementById('res').value = c;
+		}
+		</script>
+	</head>
+	<body>
+		<form>
+			<input id="a" type="text"><p>
+			<input id="s" type="text" ><p>
+			<input id="b" type="text"><p>
+			<input id="res" type="text"><p>
+			<input type="button" value="Calculate" onclick="calc();"><p>
+		</form>
+	</body>
+</html>

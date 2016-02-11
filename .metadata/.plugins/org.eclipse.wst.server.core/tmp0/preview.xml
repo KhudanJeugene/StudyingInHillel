@@ -1,4 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<server port="8080">
-  <module context="Calculator" name="Calculator" path="E:/Workspace2/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/Calculator" type="static"/>
-</server>
+<server port="8080"/>
