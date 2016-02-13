@@ -1,0 +1,30 @@
+<html >
+	<head>
+	<meta charset="utf-8">
+		<title>Calculate two number</title>
+		<script>
+		function calc() 
+		{
+			var a1 = parseInt(a.value);
+			var op = s.value;
+			var b1 = parseInt(b.value);
+			var c = 0;
+			if(op == "+") c = a1+b1;
+			else if(op == "-") c = a1-b1;
+			else if(op == "*") c = a1*b1;
+			else if(op == "/" && op!=0) c = a1/b1;
+			else alert("неподдерживаемый тип операции")
+			res.value = c;
+		}
+		</script>
+	</head>
+	<body>
+		<form id="form1">
+			<input id="a" type="text"><p>
+			<input id="s" type="text"><p>
+			<input id="b" type="text"><p>
+			<input id="res" type="text"><p>
+			<input type="button" value="Calculate" onclick="calc();"><p>
+		</form>
+	</body>
+</html>

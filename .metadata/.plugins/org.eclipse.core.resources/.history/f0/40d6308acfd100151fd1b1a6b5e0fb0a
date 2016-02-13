@@ -1,0 +1,18 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class CalcUITest
+{
+	WebDriver drv = new FirefoxDriver();
+
+	@Test
+	public void test()
+	{
+		drv.get("file:///E:/Workspace2/Calculator/Calculator.html");
+	}
+
+}

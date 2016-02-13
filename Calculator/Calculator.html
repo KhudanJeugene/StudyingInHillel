@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Calculator on line</title>
+<script type="text/javascript">
+	var a;
+	var b;
+	var oper;
+	var result = null;
+	function numb(num)
+	{
+		res.value +=num;
+	}
+	function operation(op)
+	{
+		a = parseFloat(res.value);
+		oper = op;
+		res.value = "";
+		}
+	function calc()
+	{
+		b = parseFloat(res.value)
+		if (oper == "+")
+		{
+			res.value = a+b;
+		}
+		else if (oper == "-")
+		{
+			res.value = a-b;
+		}
+		else if (oper == "*")
+		{
+			res.value = a*b;
+		}
+		else if (oper == "/" )
+		{
+			if (parseInt(res.value)==0)
+			{
+				window.alert("Деление на 0");
+				res.value = a;
+			}
+			else res.value = a/b;
+		}
+	}
+	function clearres()
+	{
+		a = 0;
+		b = 0;
+		res.value = "";
+	}
+</script>
+</head>
+<body>
+	<form id = "form1" action="">
+		<input id="res" type="text" value ="">
+		<p>
+			<input id="btn1" type="button" value="1" onclick="numb(1);"> 
+			<input id="btn2" type="button" value="2" onclick="numb(2);"> 
+			<input id="btn3" type="button" value="3" onclick="numb(3);"> 
+			<input id="btnPlus" type="button" value="+" onclick="operation(btnPlus.value);"> 
+			<input id="btnMult" type="button" value="*" onclick="operation(btnMult.value);">
+		<p>
+			<input id="btn4" type="button" value="4" onclick="numb(4);"> 
+			<input id="btn5" type="button" value="5" onclick="numb(5);"> 
+			<input id="btn6" type="button" value="6" onclick="numb(6);"> 
+			<input id="btnMin" type="button" value="-" onclick="operation(btnMin.value);">
+			<input id="btnDiv" type="button" value="/" onclick="operation(btnDiv.value);">
+		<p>
+			<input id="btn7" type="button" value="7" onclick="numb(7);">
+			<input id="btn8" type="button" value="8" onclick="numb(8);"> 
+			<input id="btn9" type="button" value="9" onclick="numb(9);"> 
+			<input id="btn0" type="button" value="0" onclick="numb(0);"> 
+			<input id="btnEq" type="button" value="=" onclick="calc();">
+		<p>
+			<input id="btnclear" type="button" value="Clear" onclick="clearres();">
+	</form>
+</body>
+</html>
