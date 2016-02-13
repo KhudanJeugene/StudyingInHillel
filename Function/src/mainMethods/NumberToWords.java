@@ -87,25 +87,29 @@ public class NumberToWords
 	public static String numberToWords(int n)
 	{	
 		String word="";	
-		if (n<0 || n>999) 
+		if (n>999) 
 		{
 			throw new IllegalArgumentException();
 		}
-		else 	
+		if (n<0) 
 		{
-			if (n>=100 && n<1000) 
-			{
-				word =hundreds(n);
-			}
-			if (n>=20 &&n<=99)
-			{
-				word=decade(n);
-			}
-			if (n>=0 && n<=19)
-			{
-				word = one(n);
-			}
+			word ="минус ";
+			n/=-1;
 		}
+		
+		if (n>=100 && n<1000) 
+		{
+			word +=hundreds(n);
+		}
+		if (n >= 20 && n <= 99)
+		{
+			word += decade(n);
+		}
+		if (n >= 0 && n <= 19)
+		{
+			word += one(n);
+		}
+
 		return word;
 	}
 	public static void main(String[] args) throws IOException

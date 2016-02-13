@@ -1,0 +1,202 @@
+package mainMethods;
+
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
+public class NumberToWordsBill
+{
+	public static String numberConvert(long num)
+	{
+		String res = "";
+		boolean sex = false;
+		int temp = 0;
+		if (num<0)
+		{
+			res = "минус ";
+			num*=-1;
+		}
+		if (num == 0)
+			res = "ноль";
+			
+		if(num >= 1000000000)
+		{
+			sex = true;
+			temp = (int)(num/1000000000);
+			res += hundred(temp,sex) + " ";
+			if(temp%10 == 1)
+				res += "миллиард" ;
+			
+			else if (temp%10 == 2 || temp%10 ==3 || temp%10 ==4)
+				res += "миллиарда" ;
+			
+			else
+				res += "миллиардов ";
+			
+			num %= 1000000000;
+		}
+		if(num>=1000000)
+		{
+			sex = true;
+			temp = (int)(num/1000000);
+			res += hundred(temp,sex)+ " ";
+			if(temp%10 == 1)
+				res += "миллион ";
+			
+			else if (temp%10 == 2 || temp%10 ==3 || temp%10 ==4)
+				res += "миллиона ";
+			
+			else
+				res += "миллионов ";
+			
+			num %= 1000000;
+		}
+		if(num>=1000)
+		{
+			temp = (int)(num/1000);
+			res += hundred(temp,sex) + " ";
+			if(temp%10 == 1)
+				res += "тысяча ";
+			
+			else if (temp%10 == 2 || temp%10 ==3 || temp%10 ==4)
+				res += "тысячи ";
+			
+			else
+				res += "тысяч ";
+			
+			num %= 1000;
+		}
+		if(num>0 && num<=999)
+		{
+			sex = true;		
+			res +=hundred((int)num,sex);
+		}
+		return res;
+	}
+	public static String hundred(int num, boolean sex)
+	{
+		String word = "";
+		if(num >= 100 && num <=999)
+		{
+			String[] hundr = new String [10];
+			hundr[1] = "сто";
+			hundr[2] = "двести";
+			hundr[3] = "триста";
+			hundr[4] = "четыреста";
+			hundr[5] = "пятьсот";
+			hundr[6] = "шестьсот";
+			hundr[7] = "семьсот";
+			hundr[8] = "восемьсот";
+			hundr[9] = "девятьсот";
+			word +=hundr[num/100] + " ";
+			num %=100;
+		}
+
+		if (num>=20)
+			word +=decade(num,sex)+ " ";
+		
+		if (num%100 < 20 && num!=0)
+			word +=one(num,sex);	
+
+		return word;
+	}
+	public static String decade(int num,boolean sex)
+	{
+		String word = "";
+		String[] dec = new String[10];
+		dec[2] = "двадцать";
+		dec[3]= "тридцать";
+		dec[4]= "сорок";
+		dec[5]="пятьдесят";
+		dec[6]="шестьдесят";
+		dec[7]="семьдесят";
+		dec[8]="восемьдесят";
+		dec[9]="девяносто";
+		word = dec[num/10];
+		if (num%10!=0)
+		{
+			word+=one(num%10,sex);
+		}
+		return word;
+	}
+	public static String one(int num, boolean sex)
+	{
+		String word = "";
+		String[] male = new String[20];
+		male[1]="один";
+		male[2]="два";
+		male[3]="три";
+		male[4]="четыре";
+		male[5]="пять";
+		male[6]="шесть";
+		male[7]="семь";
+		male[8]="восемь";
+		male[9]="девять";
+		male[10]="десять";
+		male[11]="одиннадцать";
+		male[12]="двенадцать";
+		male[13]="тринадцать";
+		male[14]="четырнадцать";
+		male[15]="пятнадцать";
+		male[16]="шестнадцать";
+		male[17]="семнадцать";
+		male[18]="восемнадцать";
+		male[19]="девятнадцать";
+
+		String[] female = new String[20];
+		female[1]="одна";
+		female[2]="две";
+		female[3]="три";
+		female[4]="четыре";
+		female[5]="пять";
+		female[6]="шесть";
+		female[7]="семь";
+		female[8]="восемь";
+		female[9]="девять";
+		female[10]="десять";
+		female[11]="одиннадцать";
+		female[12]="двенадцать";
+		female[13]="тринадцать";
+		female[14]="четырнадцать";
+		female[15]="пятнадцать";
+		female[16]="шестнадцать";
+		female[17]="семнадцать";
+		female[18]="восемнадцать";
+		female[19]="девятнадцать";
+
+		if(sex)
+			word = male[num] + " ";
+
+		else 
+			word = female[num] + " ";
+
+		return word;
+	}
+	private static long inputNum()
+	{	
+		long num = -1;
+		try(Scanner in =new Scanner(JOptionPane.showInputDialog("Input number 0-999,999,999")))
+		{
+			num = in.nextLong();
+		}
+		return num;
+	}
+	public static void main(String[] args)
+	{
+		long in = -1;
+		String res;
+		try
+		{
+			in = inputNum();
+		}
+		catch(IllegalArgumentException e)
+		{
+			System.out.println(e.getMessage());
+		}
+		if(in!=-1) 
+		{
+			res = numberConvert(in);
+			System.out.println(res.trim());
+		}
+	}
+}
