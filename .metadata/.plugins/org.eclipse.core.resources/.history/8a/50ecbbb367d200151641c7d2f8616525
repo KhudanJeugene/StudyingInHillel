@@ -1,0 +1,140 @@
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class CalcUITest
+{
+	WebDriver drv = new FirefoxDriver();
+	@Before
+	public void testBefore()
+	{
+		drv.get("file:///E:/Workspace2/Calculator/Calculator.html");
+	}
+	
+	//========================
+	//Availability
+	//========================
+	@Test
+	public void test_1()
+	{
+		drv.findElement( By.id("btn1")).click();
+		String act = drv.findElement(By.id("res")).getAttribute("value");
+		assertEquals("1",act);
+	}
+	@Test
+	public void test_2()
+	{
+		drv.findElement( By.id("btn2")).click();
+		String act = drv.findElement(By.id("res")).getAttribute("value");
+		assertEquals("2",act);
+	}
+	@Test
+	public void test_3()
+	{
+		drv.findElement( By.id("btn3")).click();
+		String act = drv.findElement(By.id("res")).getAttribute("value");
+		assertEquals("3",act);
+	}
+	@Test
+	public void test_4()
+	{
+		drv.findElement( By.id("btn4")).click();
+		String act = drv.findElement(By.id("res")).getAttribute("value");
+		assertEquals("4",act);
+	}
+	@Test
+	public void test_5()
+	{
+		drv.findElement( By.id("btn5")).click();
+		String act = drv.findElement(By.id("res")).getAttribute("value");
+		assertEquals("5",act);
+	}
+	@Test
+	public void test_6()
+	{
+		drv.findElement( By.id("btn6")).click();
+		String act = drv.findElement(By.id("res")).getAttribute("value");
+		assertEquals("6",act);
+	}
+	@Test
+	public void test_7()
+	{
+		drv.findElement( By.id("btn7")).click();
+		String act = drv.findElement(By.id("res")).getAttribute("value");
+		assertEquals("7",act);
+	}
+	@Test
+	public void test_8()
+	{
+		drv.findElement( By.id("btn8")).click();
+		String act = drv.findElement(By.id("res")).getAttribute("value");
+		assertEquals("8",act);
+	}
+	@Test
+	public void test_9()
+	{
+		drv.findElement( By.id("btn9")).click();
+		String act = drv.findElement(By.id("res")).getAttribute("value");
+		assertEquals("9",act);
+	}
+	@Test
+	public void test_0()
+	{
+		drv.findElement( By.id("btn0")).click();
+		String act = drv.findElement(By.id("res")).getAttribute("value");
+		assertEquals("0",act);
+	}
+	@Test
+	public void test_Clear()
+	{
+		drv.findElement( By.id("btnclear")).click();
+		String act = drv.findElement(By.id("res")).getAttribute("value");
+		assertEquals("",act);
+	}
+	/*@Test
+	public void test2()
+	{
+		drv.findElement( By.id("btn2")).click();
+		String act = drv.findElement(By.id("res")).getAttribute("value");
+		assertEquals("2",act);
+	}
+	@Test
+	public void test2()
+	{
+		drv.findElement( By.id("btn2")).click();
+		String act = drv.findElement(By.id("res")).getAttribute("value");
+		assertEquals("2",act);
+	}
+	@Test
+	public void test2()
+	{
+		drv.findElement( By.id("btn2")).click();
+		String act = drv.findElement(By.id("res")).getAttribute("value");
+		assertEquals("2",act);
+	}
+	@Test
+	public void test2()
+	{
+		drv.findElement( By.id("btn2")).click();
+		String act = drv.findElement(By.id("res")).getAttribute("value");
+		assertEquals("2",act);
+	}
+	@Test
+	public void test2()
+	{
+		drv.findElement( By.id("btn2")).click();
+		String act = drv.findElement(By.id("res")).getAttribute("value");
+		assertEquals("2",act);
+	}*/
+	@After
+	public void testAfter()
+	{
+		drv.close();
+	}
+
+}
