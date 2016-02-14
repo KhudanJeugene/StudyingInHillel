@@ -1,0 +1,719 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class HW4Test
+{
+	//===================
+	//dayOfWeek
+	//===================
+	
+
+	@Test
+	public void testDayOfWeek_1()
+	{
+		String res = HW4.dayOfWeek(1);
+		assertEquals("Mondey",res);
+	}
+	@Test
+	public void testDayOfWeek_2()
+	{
+		String res = HW4.dayOfWeek(2);
+		assertEquals("Tuesday",res);
+	}
+	@Test
+	public void testDayOfWeek_3()
+	{
+		String res = HW4.dayOfWeek(3);
+		assertEquals("Wednesday",res);
+	}
+	@Test
+	public void testDayOfWeek_4()
+	{
+		String res = HW4.dayOfWeek(4);
+		assertEquals("Thursday",res);
+	}
+	@Test
+	public void testDayOfWeek_5()
+	{
+		String res = HW4.dayOfWeek(5);
+		assertEquals("Friday",res);
+	}
+	@Test
+	public void testDayOfWeek6()
+	{
+		String res = HW4.dayOfWeek(6);
+		assertEquals("Saturday",res);
+	}
+	@Test
+	public void testDayOfWeek7()
+	{
+		String res = HW4.dayOfWeek(7);
+		assertEquals("Sunday",res);
+	}
+	@Test (expected = IllegalArgumentException.class)
+	public void testDayOfWeek_8()
+	{
+		HW4.dayOfWeek(0);
+	}
+	@Test (expected = IllegalArgumentException.class)
+	public void testDayOfWeek_9()
+	{
+		HW4.dayOfWeek(8);
+	}
+	
+	//===================
+	//numberToWords
+	//===================
+	
+	@Test (expected = IllegalArgumentException.class)
+	public void testNumberToWords_Neg1()
+	{
+		int n = -1;
+		HW4.numberToWords(n);
+	}
+	@Test (expected = IllegalArgumentException.class)
+	public void testNumberToWords_1000()
+	{
+		int n = 1000;
+		HW4.numberToWords(n);
+	}
+	@Test
+	public void testNumberToWords_1()
+	{
+		int n = 1;
+		String res ="Один";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	@Test
+	public void testNumberToWords_2()
+	{
+		int n = 2;
+		String res ="Два";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	@Test
+	public void testNumberToWords_3()
+	{
+		int n = 3;
+		String res ="Три";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	@Test
+	public void testNumberToWords_4()
+	{
+		int n = 4;
+		String res ="Четыре";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	@Test
+	public void testNumberToWords_5()
+	{
+		int n = 5;
+		String res ="Пять";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	@Test
+	public void testNumberToWords_6()
+	{
+		int n = 6;
+		String res ="Шесть";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	@Test
+	public void testNumberToWords_7()
+	{
+		int n = 7;
+		String res ="Семь";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	@Test
+	public void testNumberToWords_8()
+	{
+		int n = 8;
+		String res ="Восемь";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	@Test
+	public void testNumberToWords_9()
+	{
+		int n = 9;
+		String res ="Девять";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	@Test
+	public void testNumberToWords_10()
+	{
+		int n = 10;
+		String res ="Десять";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	@Test
+	public void testNumberToWords_11()
+	{
+		int n = 11;
+		String res ="Одиннадцать";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	@Test
+	public void testNumberToWords_12()
+	{
+		int n = 12;
+		String res ="Двенадцать";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	@Test
+	public void testNumberToWords_14()
+	{
+		int n = 14;
+		String res ="Четырнадцать";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	@Test
+	public void testNumberToWords_15()
+	{
+		int n = 15;
+		String res ="Пятнадцать";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	@Test
+	public void testNumberToWords_16()
+	{
+		int n = 16;
+		String res ="Шестнадцать";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	@Test
+	public void testNumberToWords_17()
+	{
+		int n = 17;
+		String res ="Семнадцать";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	@Test
+	public void testNumberToWords_18()
+	{
+		int n = 18;
+		String res ="Восемнадцать";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	@Test
+	public void testNumberToWords_19()
+	{
+		int n = 19;
+		String res ="Девятнадцать";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	@Test
+	public void testNumberToWords_20()
+	{
+		int n = 20;
+		String res ="Двадцать";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	@Test
+	public void testNumberToWords_25()
+	{
+		int n = 25;
+		String res ="Двадцать Пять";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	@Test
+	public void testNumberToWords_29()
+	{
+		int n = 29;
+		String res ="Двадцать Девять";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	@Test
+	public void testNumberToWords_30()
+	{
+		int n = 30;
+		String res ="Тридцать";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	@Test
+	public void testNumberToWords_35()
+	{
+		int n = 35;
+		String res ="Тридцать Пять";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	@Test
+	public void testNumberToWords_39()
+	{
+		int n = 39;
+		String res ="Тридцать Девять";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	@Test
+	public void testNumberToWords_40()
+	{
+		int n = 40;
+		String res ="Сорок";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	@Test
+	public void testNumberToWords_45()
+	{
+		int n = 45;
+		String res ="Сорок Пять";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	@Test
+	public void testNumberToWords_49()
+	{
+		int n = 49;
+		String res ="Сорок Девять";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	@Test
+	public void testNumberToWords_50()
+	{
+		int n = 50;
+		String res ="Пятьдесят";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	@Test
+	public void testNumberToWords_60()
+	{
+		int n = 60;
+		String res ="Шестьдесят";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	@Test
+	public void testNumberToWords_70()
+	{
+		int n = 70;
+		String res ="Семьдесят";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	public void testNumberToWords_80()
+	{
+		int n = 80;
+		String res ="Восемьдесят";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	public void testNumberToWords_90()
+	{
+		int n = 90;
+		String res ="Девяносто";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	public void testNumberToWords_100()
+	{
+		int n = 100;
+		String res ="Сто";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	public void testNumberToWords_200()
+	{
+		int n = 200;
+		String res ="Двести";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	public void testNumberToWords_300()
+	{
+		int n = 300;
+		String res ="Триста";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	public void testNumberToWords_400()
+	{
+		int n = 50;
+		String res ="Четыреста";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	public void testNumberToWords_452()
+	{
+		int n = 452;
+		String res ="Четыреста Пятьдесят Два";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	public void testNumberToWords_500()
+	{
+		int n = 500;
+		String res ="Пятьсот";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	public void testNumberToWords_600()
+	{
+		int n = 600;
+		String res ="Шестьсот";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	public void testNumberToWords_700()
+	{
+		int n = 700;
+		String res ="Семьдесят";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	public void testNumberToWords_800()
+	{
+		int n = 800;
+		String res ="Восемьсот";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	public void testNumberToWords_900()
+	{
+		int n = 900;
+		String res ="Девятьсот";
+		assertEquals(res,HW4.numberToWords(n));
+	}
+	
+	//====================
+	//findInt
+	//====================
+	
+	@Test (expected = IllegalArgumentException.class)
+	public void testFindInt_null()
+	{
+		String word = null;
+		HW4.findInt(word);
+	}
+	@Test (expected = IllegalArgumentException.class)
+	public void testFindInt_empty()
+	{
+		String word = "";
+		HW4.findInt(word);
+	}
+	@Test 
+	public void testFindInt_0()
+	{
+		String word = "ноль";
+		int res=0;
+		assertEquals(res, HW4.findInt(word));
+	}
+	@Test 
+	public void testFindInt_1()
+	{
+		String word = "один";
+		int res=1;
+		assertEquals(res, HW4.findInt(word));
+	}
+	@Test 
+	public void testFindInt_2()
+	{
+		String word = "два";
+		int res=2;
+		assertEquals(res, HW4.findInt(word));
+	}
+	@Test 
+	public void testFindInt_3()
+	{
+		String word = "три";
+		int res=3;
+		assertEquals(res, HW4.findInt(word));
+	}
+	@Test 
+	public void testFindInt_4()
+	{
+		String word = "четыре";
+		int res=4;
+		assertEquals(res, HW4.findInt(word));
+	}
+	@Test 
+	public void testFindInt_5()
+	{
+		String word = "пять";
+		int res=5;
+		assertEquals(res, HW4.findInt(word));
+	}
+	@Test 
+	public void testFindInt_7()
+	{
+		String word = "семь";
+		int res=7;
+		assertEquals(res, HW4.findInt(word));
+	}
+	@Test 
+	public void testFindInt_8()
+	{
+		String word = "восемь";
+		int res=8;
+		assertEquals(res, HW4.findInt(word));
+	}
+	@Test 
+	public void testFindInt_9()
+	{
+		String word = "девять";
+		int res=9;
+		assertEquals(res, HW4.findInt(word));
+	}
+	@Test 
+	public void testFindInt_10()
+	{
+		String word = "десять";
+		int res=10;
+		assertEquals(res, HW4.findInt(word));
+	}
+	@Test 
+	public void testFindInt_11()
+	{
+		String word = "одиннадцать";
+		int res=11;
+		assertEquals(res, HW4.findInt(word));
+	}
+	@Test 
+	public void testFindInt_12()
+	{
+		String word = "двенадцать";
+		int res=12;
+		assertEquals(res, HW4.findInt(word));
+	}
+	@Test 
+	public void testFindInt_13()
+	{
+		String word = "тринадцать";
+		int res=13;
+		assertEquals(res, HW4.findInt(word));
+	}
+	@Test 
+	public void testFindInt_14()
+	{
+		String word = "четырнадцать";
+		int res=14;
+		assertEquals(res, HW4.findInt(word));
+	}
+	@Test 
+	public void testFindInt_15()
+	{
+		String word = "пятнадцать";
+		int res=15;
+		assertEquals(res, HW4.findInt(word));
+	}
+	@Test 
+	public void testFindInt_16()
+	{
+		String word = "шестнадцать";
+		int res=16;
+		assertEquals(res, HW4.findInt(word));
+	}
+	@Test 
+	public void testFindInt_17()
+	{
+		String word = "семнадцать";
+		int res=17;
+		assertEquals(res, HW4.findInt(word));
+	}
+	@Test 
+	public void testFindInt_18()
+	{
+		String word = "восемнадцать";
+		int res=18;
+		assertEquals(res, HW4.findInt(word));
+	}
+	@Test 
+	public void testFindInt_19()
+	{
+		String word = "девятнадцать";
+		int res=19;
+		assertEquals(res, HW4.findInt(word));
+	}
+	@Test 
+	public void testFindInt_20()
+	{
+		String word = "двадцать";
+		int res=20;
+		assertEquals(res, HW4.findInt(word));
+	}
+	@Test 
+	public void testFindInt_25()
+	{
+		String word = "двадцать пять";
+		int res=25;
+		assertEquals(res, HW4.findInt(word));
+	}
+	@Test 
+	public void testFindInt_30()
+	{
+		String word = "тридцать";
+		int res=30;
+		assertEquals(res, HW4.findInt(word));
+	}
+	@Test 
+	public void testFindInt_35()
+	{
+		String word = "тридцать пять";
+		int res=35;
+		assertEquals(res, HW4.findInt(word));
+	}
+	@Test 
+	public void testFindInt_40()
+	{
+		String word = "сорок";
+		int res=40;
+		assertEquals(res, HW4.findInt(word));
+	}
+	@Test 
+	public void testFindInt_50()
+	{
+		String word = "пятьдесят";
+		int res=50;
+		assertEquals(res, HW4.findInt(word));
+	}
+	@Test 
+	public void testFindInt_60()
+	{
+		String word = "шестьдесят";
+		int res=60;
+		assertEquals(res, HW4.findInt(word));
+	}
+	@Test 
+	public void testFindInt_70()
+	{
+		String word = "семьдесят";
+		int res=70;
+		assertEquals(res, HW4.findInt(word));
+	}
+	@Test 
+	public void testFindInt_80()
+	{
+		String word = "восемьдесят";
+		int res=80;
+		assertEquals(res, HW4.findInt(word));
+	}
+	@Test 
+	public void testFindInt_90()
+	{
+		String word = "девяносто";
+		int res=90;
+		assertEquals(res, HW4.findInt(word));
+	}
+	@Test 
+	public void testFindInt_100()
+	{
+		String word = "сто";
+		int res=100;
+		assertEquals(res, HW4.findInt(word));
+	}
+	@Test 
+	public void testFindInt_101()
+	{
+		String word = "сто один";
+		int res=101;
+		assertEquals(res, HW4.findInt(word));
+	}
+	@Test 
+	public void testFindInt_111()
+	{
+		String word = "сто одиннадцать";
+		int res=111;
+		assertEquals(res, HW4.findInt(word));
+	}
+	@Test 
+	public void testFindInt_121()
+	{
+		String word = "сто двадцать один";
+		int res=121;
+		assertEquals(res, HW4.findInt(word));
+	}
+	@Test 
+	public void testFindInt_200()
+	{
+		String word = "двести";
+		int res=200;
+		assertEquals(res, HW4.findInt(word));
+	}
+	@Test 
+	public void testFindInt_300()
+	{
+		String word = "триста";
+		int res=300;
+		assertEquals(res, HW4.findInt(word));
+	}
+	@Test 
+	public void testFindInt_400()
+	{
+		String word = "четыреста";
+		int res=400;
+		assertEquals(res, HW4.findInt(word));
+	}
+	@Test 
+	public void testFindInt_500()
+	{
+		String word = "пятьсот";
+		int res=500;
+		assertEquals(res, HW4.findInt(word));
+	}
+	@Test 
+	public void testFindInt_600()
+	{
+		String word = "шестьсот";
+		int res=600;
+		assertEquals(res, HW4.findInt(word));
+	}
+	@Test 
+	public void testFindInt_700()
+	{
+		String word = "семьсот";
+		int res=700;
+		assertEquals(res, HW4.findInt(word));
+	}
+	@Test 
+	public void testFindInt_800()
+	{
+		String word = "восемьсот";
+		int res=800;
+		assertEquals(res, HW4.findInt(word));
+	}
+	@Test 
+	public void testFindInt_900()
+	{
+		String word = "девятьсот";
+		int res=900;
+		assertEquals(res, HW4.findInt(word));
+	}
+	
+	//===================
+	//dist
+	//===================
+	
+	@Test
+	public void testDist_dist5()
+	{
+		int x1=4, y1=0, x2 =0, y2 =3;
+		double res = 5.0;
+		assertEquals(res, HW4.dist(x1, y1, x2, y2),res);
+	}
+	@Test
+	public void testDist_0()
+	{
+		int x1=0, y1=0, x2 =0, y2 =0;
+		double res = 0.0;
+		assertEquals(res, HW4.dist(x1, y1, x2, y2),res);
+	}@Test
+	public void testDist_1()
+	{
+		int x1=1, y1=1, x2 =1, y2 =1;
+		double res = 0.0;
+		assertEquals(res, HW4.dist(x1, y1, x2, y2),res);
+	}
+	@Test
+	public void testDist_Neg1()
+	{
+		int x1=-1, y1=-1, x2 =-1, y2 =-1;
+		double res = 0.0;
+		assertEquals(res, HW4.dist(x1, y1, x2, y2),res);
+	}
+	//==============================
+	//numberConvert
+	//==============================
+	
+	@Test
+	public void testNumberConvert_1()
+	{
+		long numb = -1;
+		String exp = "минус один";
+		String act = HW4.numberConvert(numb);
+		assertEquals(exp,act);
+	}
+	@Test
+	public void testNumberConvert_0()
+	{
+		long numb = 0;
+		String exp = "ноль";
+		String act = HW4.numberConvert(numb);
+		assertEquals(exp,act);
+	}
+}

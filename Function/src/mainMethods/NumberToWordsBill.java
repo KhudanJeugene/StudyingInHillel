@@ -24,7 +24,7 @@ public class NumberToWordsBill
 			sex = true;
 			temp = (int)(num/1000000000);
 			res += hundred(temp,sex);
-			if(temp%10 > 4 || temp%100 >= 11 && temp%100 <= 14)
+			if(temp%10 > 4 || temp%100 >= 11 && temp%100 <= 14 || temp%10==0)
 				res += "миллиардов ";
 			else if(temp%10 > 1)
 				res += "миллиарда ";
@@ -38,7 +38,7 @@ public class NumberToWordsBill
 			sex = true;
 			temp = (int)(num/1000000);
 			res += hundred(temp,sex);
-			if(temp%10 > 4 || temp%100 >= 11 && temp%100 <= 14)
+			if(temp%10 > 4 || temp%100 >= 11 && temp%100 <= 14 || temp%10==0)
 				res += "миллионов ";
 			else if(temp%10 > 1)
 				res += "миллиона ";
@@ -51,7 +51,7 @@ public class NumberToWordsBill
 		{
 			temp = (int)(num/1000);
 			res += hundred(temp,sex);
-			if(temp%10 > 4 || temp%100 >= 11 && temp%100 <= 14)
+			if(temp%10 > 4 || temp%100 >= 11 && temp%100 <= 14 || temp%10==0)
 				res += "тыс€ч ";
 			else if(temp%10 > 1)
 				res += "тыс€чи ";
@@ -65,7 +65,7 @@ public class NumberToWordsBill
 			sex = true;		
 			res +=hundred((int)num,sex);
 		}
-		return res;
+		return res.trim();
 	}
 	public static String hundred(int num, boolean sex)
 	{
@@ -190,7 +190,7 @@ public class NumberToWordsBill
 		if(in!=-1) 
 		{
 			res = numberConvert(in);
-			System.out.println(res.trim());
+			System.out.println(res);
 		}
 	}
 }
