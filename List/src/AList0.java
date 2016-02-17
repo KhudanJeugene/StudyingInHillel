@@ -140,8 +140,12 @@ public class AList0 implements EList
 	@Override
 	public int delPos(int pos)
 	{
-		if (ar.length == 0 || pos < 0 || pos >= ar.length)
+		if (ar.length == 0)
 			throw new IllegalArgumentException();
+		
+		if (pos < 0 || pos >= ar.length)
+			throw new ArrayIndexOutOfBoundsException();
+			
 
 		int delVal = ar[pos];
 		int[] temp = new int[ar.length - 1];

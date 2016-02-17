@@ -120,8 +120,11 @@ public class AList2 implements EList
 	@Override
 	public int delPos(int pos)
 	{
-		if (end - start == 0 || pos+start < start-1 || pos > end)
+		if (end - start == 0)
 			throw new IllegalArgumentException();
+		
+		if(pos+start < start-1 || pos > end)
+			throw new ArrayIndexOutOfBoundsException();
 
 		int delVal = ar[pos + start];
 		for(int i = pos + start; i < end; i++)

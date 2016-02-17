@@ -21,7 +21,8 @@ public class EListTest
 				{     
 			{ new AList0() },
 			{ new AList1() },
-			{ new AList2() }
+			{ new AList2() },
+			{ new LList() }
 				});
 	}
 	
@@ -607,7 +608,7 @@ public class EListTest
 		assertArrayEquals(exp,act);
 
 	}
-	@Test(expected = IllegalArgumentException.class)
+	@Test(expected = ArrayIndexOutOfBoundsException.class)
 	public void testDelPos_manyExc()
 	{
 		int[] ar = {10,20,30,88,41,65};
@@ -791,10 +792,10 @@ public class EListTest
 	@Test
 	public void testMinElem_many() 
 	{
-		int[] ar = {10,20,30,88,41,65};
+		int[] ar = {10,20,30,88,41,1};
 		rr.init(ar);
 		int min = rr.minElem();
-		assertEquals(10,min);
+		assertEquals(1,min);
 	}
 	@Test
 	public void testMinElem_2() 
@@ -876,10 +877,10 @@ public class EListTest
 	@Test
 	public void testMinInd_many() 
 	{
-		int[] ar = {10,20,30,88,41,65};
+		int[] ar = {10,20,30,88,1,65};
 		rr.init(ar);
 		int min = rr.minInd();
-		assertEquals(0,min);
+		assertEquals(4,min);
 	}
 	@Test
 	public void testMinInd_2() 

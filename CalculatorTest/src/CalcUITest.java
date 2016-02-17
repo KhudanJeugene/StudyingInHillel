@@ -1,7 +1,8 @@
 import static org.junit.Assert.*;
 
-import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,11 +10,16 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class CalcUITest
 {
-	WebDriver drv = new FirefoxDriver();
+	static WebDriver drv = new FirefoxDriver();
+	@BeforeClass
+	public static void testBeforeClass()
+	{
+		drv.get("file:///E:/Workspace2/Calculator/Calculator.html");
+	}
 	@Before
 	public void testBefore()
 	{
-		drv.get("file:///E:/Workspace2/Calculator/Calculator.html");
+		drv.navigate().refresh();
 	}
 	//========================
 	//Availability
@@ -228,6 +234,7 @@ public class CalcUITest
 		drv.findElement( By.id("btnEq")).click();
 		String act = drv.findElement(By.id("res")).getAttribute("value");
 		assertEquals("",act);
+
 	}
 
 	//===================
@@ -406,8 +413,9 @@ public class CalcUITest
 		String act = drv.findElement(By.id("res")).getAttribute("value");
 		assertEquals("3",act);
 	}
-	@After
-	public void testAfter()
+
+	@AfterClass
+	public static void testAfterClass()
 	{
 		drv.close();
 	}
