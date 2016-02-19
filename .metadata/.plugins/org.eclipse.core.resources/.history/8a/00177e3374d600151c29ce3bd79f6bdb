@@ -1,0 +1,97 @@
+package Calculator;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+
+public class CalcEngine implements ActionListener
+{
+	XPanel xp;
+	boolean dot;
+	double curVal, entVal;
+	String op;
+
+	public CalcEngine(XPanel xp)
+	{
+		this.xp = xp;
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e)
+	{
+
+		JButton click = (JButton) e.getSource();
+		String resText = xp.getText();
+		dot = resText.contains(".");
+		if (!resText.equals(""))
+			entVal = Double.parseDouble(resText);
+		if (click.getText().equals("CE"))
+		{
+			xp.clear();
+			
+		}
+		if (click.getText().equals("+")) 
+		{
+			op = "+";
+			curVal = entVal;
+			xp.clear();
+
+		} 
+		else if (click.getText().equals("-")) 
+		{
+			op = "-";
+			curVal = entVal;
+			xp.clear();
+		} 
+		else if (click.getText().equals("*")) 
+		{
+			op = "*";
+			curVal = entVal;
+			xp.setText("");
+		} 
+		else if (click.getText().equals("/")) 
+		{
+			op = "/";
+			curVal = entVal;
+			xp.clear();
+		} else if ((click == xp.btnEq)
+				&& (op != null)) 
+		{		
+			if (op.equals("+")) 
+			{
+				curVal += entVal;
+				xp.setText("" + curVal);
+			} else if (op.equals("-")) 
+			{
+				curVal -= entVal;
+				xp.setText("" + curVal);
+			} else if (op.equals("*")) 
+			{
+				curVal *= entVal;
+				xp.setText("" + curVal);
+			} else if (op.equals("/")) 
+			{
+				if(entVal != 0)
+					curVal /= entVal;
+				xp.setText("" + curVal);
+			}
+		}
+
+		else 
+		{
+
+			if (!click.getText().equals("=")) 
+			{
+				if ((click.getText().equals(".")) && dot){}
+				else
+				{
+					String click1 = click.getText();
+					xp.setText(resText + click1);
+				}
+
+			}
+		}
+	}
+
+}

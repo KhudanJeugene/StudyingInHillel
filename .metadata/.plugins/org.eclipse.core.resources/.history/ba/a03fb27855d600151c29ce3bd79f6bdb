@@ -1,0 +1,12 @@
+package Calculator1;
+
+import javax.swing.JFrame;
+
+public class FrameCalc extends JFrame
+{
+	public FrameCalc()
+	{
+		private static final long serialVersionUID = 1L;
+		add(new FrameCalc());
+	}
+}

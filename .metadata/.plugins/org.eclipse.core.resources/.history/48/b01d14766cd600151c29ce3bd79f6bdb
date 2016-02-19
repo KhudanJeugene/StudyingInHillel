@@ -1,0 +1,11 @@
+package Calculator;
+
+public class CalcEngine
+{
+	XPanel xp;
+	
+	public CalcEngine(XPanel xp)
+ {
+	 this.xp = xp;
+ }
+}

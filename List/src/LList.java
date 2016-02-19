@@ -309,6 +309,9 @@ public class LList implements EList
 	@Override
 	public void reverseHalf()
 	{
+		if (size() <= 1)
+			return;
+
 		int d = (size() % 2 == 0) ? 0 : 1;
 
 		for(int i=0; i< size() /2; i++)
@@ -322,8 +325,9 @@ public class LList implements EList
 	@Override
 	public void sort()
 	{
-		if (size() < 1)
+		if (size() <= 1)
 			return;
+
 		for (int i=0; i < size()-1; i++)
 		{
 			int min = i;

@@ -1,0 +1,22 @@
+package Calculator;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class CalcEngine implements ActionListener
+{
+	XPanel xp;
+	
+	public CalcEngine(XPanel xp)
+ {
+	 this.xp = xp;
+ }
+
+	@Override
+	public void actionPerformed(ActionEvent e)
+	{
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

@@ -1,0 +1,8 @@
+package Calculator1;
+
+import javax.swing.JFrame;
+
+public class FrameCalc extends JFrame
+{
+
+}

@@ -1,0 +1,28 @@
+package Calculator;
+import java.awt.Color;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFormattedTextField;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class XPanel extends JPanel
+{
+
+	private static final long serialVersionUID = 1L;
+
+	public XPanel()
+	{
+		JPanel jp1 = new JPanel(new GridLayout(1,1));
+		jp1.setSize(700, 200);
+		add(jp1);
+		JFormattedTextField res = new JFormattedTextField();
+		res.setSize(600,40);
+		res.setAlignmentY(RIGHT_ALIGNMENT);
+		jp1.add(res);
+	}
+}

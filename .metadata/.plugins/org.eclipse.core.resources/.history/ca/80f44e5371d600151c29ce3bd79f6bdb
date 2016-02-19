@@ -1,0 +1,31 @@
+package Calculator;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+
+public class CalcEngine implements ActionListener
+{
+	XPanel xp;
+	
+	public CalcEngine(XPanel xp)
+ {
+	 this.xp = xp;
+ }
+
+	@Override
+	public void actionPerformed(ActionEvent e)
+	{
+		JButton click = (JButton) e.getSource();
+		String resVal = xp.getText();
+		String clickBut = click.getText();
+		if(click.getText() == "+")
+		{
+			
+		}
+		xp.setText(resVal + clickBut);
+		
+	}
+	
+}

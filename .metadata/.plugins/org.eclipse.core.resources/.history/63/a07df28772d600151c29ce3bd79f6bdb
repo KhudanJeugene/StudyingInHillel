@@ -1,0 +1,79 @@
+package Calculator;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+
+public class CalcEngine implements ActionListener
+{
+	XPanel xp;
+	boolean dot;
+	double carVal, entVal;
+	String op;
+	
+	public CalcEngine(XPanel xp)
+ {
+	 this.xp = xp;
+ }
+
+	@Override
+	public void actionPerformed(ActionEvent e)
+	{
+
+				JButton click = (JButton) e.getSource();
+				String resText = xp.getText();
+				dot = resText.contains(".");
+				if (!resText.equals(""))
+					entVal = Double.parseDouble(resText);
+
+				if (clickedButton.getText().equals("+")) {
+					op = "+";
+					carVal = entVal;
+					xp.clear();
+
+				} else if (clickedButton.getText().equals("-")) {
+					op = "-";
+					carVal = entVal;
+					xp.clear();
+				} else if (clickedButton.getText().equals("*")) {
+					selectedAction = "*";
+					currentNumber = enteredNumber;
+					parent.setDisplayValue("");
+				} else if (clickedButton.getText().equals("/")) {
+					selectedAction = "/";
+					currentNumber = enteredNumber;
+					parent.setDisplayValue("");
+				} else if ((clickedButton == parent.buttonEqual)
+						&& (selectedAction != null)) {
+					if (selectedAction.equals("+")) {
+						currentNumber += enteredNumber;
+						parent.setDisplayValue("" + currentNumber);
+					} else if (selectedAction.equals("-")) {
+						currentNumber -= enteredNumber;
+						parent.setDisplayValue("" + currentNumber);
+					} else if (selectedAction.equals("*")) {
+						currentNumber *= enteredNumber;
+						parent.setDisplayValue("" + currentNumber);
+					} else if (selectedAction.equals("/")) {
+						currentNumber /= enteredNumber;
+						parent.setDisplayValue("" + currentNumber);
+					}
+				}
+
+				else {
+
+					if (!clickedButton.getText().equals("=")) {
+						if ((clickedButton.getText().equals(".")) && dot){}
+						else
+						{
+							// Get the button's label
+							String clickedButtonLabel = clickedButton.getText();
+							parent.setDisplayValue(dispFieldText + clickedButtonLabel);
+						}
+
+					}
+				}
+	}
+	
+}

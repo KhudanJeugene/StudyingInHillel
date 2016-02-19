@@ -1,0 +1,9 @@
+package Calculator2;
+
+public class FrameCalc2
+{
+	public FrameCalc2()
+	{
+		
+	}
+}

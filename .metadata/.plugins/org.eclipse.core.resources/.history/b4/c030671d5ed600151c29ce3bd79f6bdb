@@ -1,0 +1,12 @@
+package Calculator2;
+
+import javax.swing.JPanel;
+
+public class PanelCalc2 extends JPanel
+{
+	private static final long serialVersionUID = 1L;
+	public PanelCalc2()
+	{
+		
+	}
+}
