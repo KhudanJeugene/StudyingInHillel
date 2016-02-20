@@ -57,6 +57,19 @@ public class LList implements EList
 		}
 		return ret;
 	}
+	@Override
+	public String toString()
+	{
+		String str = "{";
+		Node p = root;
+		while(p != null)
+		{
+			str += (p.next != null) ? p.val + ", " : p.val;
+			p = p.next;
+		}
+		str += "}";
+		return str;
+	}
 
 	@Override
 	public void addStart(int val)
@@ -73,7 +86,7 @@ public class LList implements EList
 		Node p = root;
 		if (p == null)	
 			addStart(val);
-		
+
 		else 
 		{
 			while(p.next != null)
@@ -89,11 +102,11 @@ public class LList implements EList
 	{
 		if (pos < 0 || pos > size())
 			throw new ArrayIndexOutOfBoundsException();
-		
-		
+
+
 		if (pos == 0)
 			addStart(val);
-		
+
 		else
 		{	
 			Node p = root;
@@ -112,7 +125,7 @@ public class LList implements EList
 	{
 		if(size() == 0)
 			throw new IllegalArgumentException();
-		
+
 		int delVal = root.val;
 		root = root.next;
 		return delVal;
@@ -123,22 +136,23 @@ public class LList implements EList
 	{
 		if (size() == 0)
 			throw new IllegalArgumentException();
-		
-		Node p = root;
-		Node tempP = p;
-		
-		while(p.next != null)
+
+		int delVal = root.val;
+		if (size() == 1)
 		{
-			tempP = p;
-			p = p.next;	
-		}
-		int delVal = p.val;
-		if (size() > 1)
-		 tempP.next = null;	
-		
-		else 
 			root = null;
-		
+		}
+		else
+		{
+			Node p = root;
+			Node tempP;
+			while(p.next != null)
+			{
+				tempP = p;
+				p = p.next;	
+			}
+			delVal = p.val;
+		}
 		return delVal;
 	}
 
@@ -147,13 +161,13 @@ public class LList implements EList
 	{
 		if (size() == 0)
 			throw new IllegalArgumentException();
-		
+
 		if (pos < 0 || pos >= size())
 			throw new ArrayIndexOutOfBoundsException();
-		
+
 		Node p = root;
 		Node tempP = p;
-		
+
 		for (int i = 0; i < pos; i++)
 		{
 			tempP = p;
@@ -162,7 +176,7 @@ public class LList implements EList
 		int delVal = p.val;
 		if(size() == 1)
 			root = null;
-		
+
 		else
 			tempP.next = p.next;
 		return delVal;
@@ -175,67 +189,158 @@ public class LList implements EList
 			throw new ArrayIndexOutOfBoundsException();
 
 		Node p = root;
-		for (int i = 0; i <= pos; i++)
+		for (int i = 0; i < pos; i++)
 		{
 			p = p.next;
-			p.val = val;
 		}
+		p.val = val;
 	}
 
 	@Override
 	public int get(int pos)
 	{
-		// TODO Auto-generated method stub
-		return 0;
+		if (pos < 0 || pos >= size())
+			throw new ArrayIndexOutOfBoundsException();
+
+		Node p = root;
+		for (int i = 0; i < pos; i++)
+		{
+			p = p.next;
+		}
+		int getVal = p.val;
+		return getVal;
 	}
 
 	@Override
 	public int minElem()
 	{
-		// TODO Auto-generated method stub
-		return 0;
+		if (size() == 0)
+			throw new IllegalArgumentException();
+
+		int min = root.val;
+		Node p = root;
+		while (p.next != null)
+		{
+			p = p.next;
+
+			if (min > p.val)
+				min = p.val;	
+		}
+		return min;
 	}
 
 	@Override
 	public int maxElem()
 	{
-		// TODO Auto-generated method stub
-		return 0;
+		if (size() == 0)
+			throw new IllegalArgumentException();
+
+		int max = root.val;
+		Node p = root;
+		while (p.next != null)
+		{
+			p = p.next;
+
+			if (max < p.val)
+				max = p.val;
+
+		}
+		return max;
 	}
 
 	@Override
 	public int minInd()
 	{
-		// TODO Auto-generated method stub
-		return 0;
+		if (size() == 0)
+			throw new IllegalArgumentException();
+
+		int minInd = 0;
+		int min = root.val;
+		Node p = root;
+		for (int i = 1; p.next != null; i++)
+		{
+			p = p.next;
+
+			if (min > p.val)
+			{
+				min = p.val;
+				minInd = i;
+			}
+		}
+		return minInd;
 	}
 
 	@Override
 	public int maxInd()
 	{
-		// TODO Auto-generated method stub
-		return 0;
+		if (size() == 0)
+			throw new IllegalArgumentException();
+
+		int maxInd = 0;
+		int max = root.val;
+		Node p = root;
+		for (int i = 1; p.next != null; i++)
+		{
+			p = p.next;
+
+			if (max < p.val)
+			{
+				max = p.val;
+				maxInd = i;
+			}
+		}
+		return maxInd;
 	}
 
 	@Override
 	public void reverse()
 	{
-		// TODO Auto-generated method stub
+		if (size() <= 1)
+			return;
 
+		Node p = root;
+		root = null;
+		while (p!=null)
+		{
+			addStart(p.val);
+			p = p.next;
+		}
 	}
 
 	@Override
 	public void reverseHalf()
 	{
-		// TODO Auto-generated method stub
+		if (size() <= 1)
+			return;
 
+		int d = (size() % 2 == 0) ? 0 : 1;
+
+		for(int i=0; i< size() /2; i++)
+		{
+			int temp = get(i);
+			set(i,get(size()/2 + d + i)); 
+			set(size()/2+d+i,temp);
+		}
 	}
 
 	@Override
 	public void sort()
 	{
-		// TODO Auto-generated method stub
+		if (size() <= 1)
+			return;
 
+		for (int i=0; i < size()-1; i++)
+		{
+			int min = i;
+			for (int j = i + 1; j < size(); j++)
+			{
+				if (get(min)>get(j)) min=j;
+			}
+			int temp = get(i);
+			set(i,get(min));
+			set(min,temp);
+		}
 	}
-
 }
+
+

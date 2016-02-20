@@ -172,17 +172,12 @@ public class LList implements EList
 			root = null;
 		
 		Node p = root;
-		for (int i = 0; i < pos; i++)
+		for (int i = 0; i <= pos; i++)
 		{
 			Node tempP = p;
 			p = p.next;
-			if(i == pos - 1)
-			{
-				delVal = p.val;
-				tempP.next = p.next;
-			}
+			
 		}		
-		
 		return delVal;
 	}
 

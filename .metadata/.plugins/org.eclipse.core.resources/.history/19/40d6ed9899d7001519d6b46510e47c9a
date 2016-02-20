@@ -178,7 +178,6 @@ public class LList implements EList
 			p = p.next;
 			if(i == pos - 1)
 			{
-				delVal = p.val;
 				tempP.next = p.next;
 			}
 		}		
